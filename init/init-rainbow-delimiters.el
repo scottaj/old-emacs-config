@@ -1,0 +1,1 @@
+(global-rainbow-delimiters-mode)
