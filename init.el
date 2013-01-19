@@ -101,6 +101,8 @@
                 popup-kill-ring ; Interactively select from kill ring
                 undo-tree ; Better undo/redo
                 emacs-nav ; Tree navigation
+                exec-path-from-shell ; Fix shell settings in OSX
+                evil-numbers ; Increment and decrement numbers
 		))
 
 
@@ -133,6 +135,16 @@
 
 ;; Make sure option key only acts as Meta on OSX
 (setq mac-option-key-is-meta t)
+
+
+;; Setup handling of backup files.
+(setq backup-directory-alist '(("." . "~/.emacs.d/backup"))
+  backup-by-copying t    ; Don't delink hardlinks
+  version-control t      ; Use version numbers on backups
+  delete-old-versions t  ; Automatically delete excess backups
+  kept-new-versions 20   ; how many of the newest versions to keep
+  kept-old-versions 5    ; and how many of the old
+  )
 
 
 
@@ -276,7 +288,15 @@
 
 
 
-
+;; Shell settings
+(when (display-graphic-p)
+  (defun set-exec-path-from-shell-PATH ()
+    (let ((path-from-shell
+           (replace-regexp-in-string "[[:space:]\n]*$" ""
+                                     (shell-command-to-string "$SHELL -l -c 'echo $PATH'"))))
+      (setenv "PATH" path-from-shell)
+      (setq exec-path (split-string path-from-shell path-separator))))
+  (when (equal system-type 'darwin) (set-exec-path-from-shell-PATH)))
 
 
 
