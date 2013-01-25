@@ -1,0 +1,1 @@
+(global-pretty-mode 1)
