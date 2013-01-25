@@ -1,1 +1,1 @@
-(setq-default feature-use-rvm t)
+(setq feature-use-rvm t)

@@ -1,4 +1,7 @@
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/el-get/auto-complete/dict")
-(add-hook 'ruby-mode-hook (lambda() (setq ac-sources (append '(ac-source-yasnippet) ac-sources))))
 (ac-config-default)
+(setq ac-auto-show-menu t)
+(setq ac-modes '(emacs-lisp-mode lisp-interaction-mode c-mode cc-mode c++-mode java-mode clojure-mode scala-mode scheme-mode ocaml-mode tuareg-mode perl-mode cperl-mode python-mode ruby-mode ecmascript-mode javascript-mode js-mode js2-mode php-mode css-mode makefile-mode sh-mode fortran-mode f90-mode ada-mode xml-mode sgml-mode slim-mode coffee-mode))
+(setq ac-stop-words '("end" "def" "begin" "do" "it"))
+(setq ac-use-fuzzy t)
