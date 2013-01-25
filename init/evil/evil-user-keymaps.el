@@ -1,14 +1,10 @@
+;; Clear insert state bindings.
+(setcdr evil-insert-state-map nil)
+
 ;; Make sure escape gets back to normal state.
-(define-key evil-insert-state-map (kbd "ESC") 'evil-normal-state)
 (define-key evil-insert-state-map [escape] 'evil-normal-state)
-(define-key evil-visual-state-map (kbd "ESC") 'evil-normal-state)
 (define-key evil-visual-state-map [escape] 'evil-normal-state)
-(define-key evil-emacs-state-map (kbd "ESC") 'evil-normal-state)
 (define-key evil-emacs-state-map [escape] 'evil-normal-state)
-
-;; ex (aka :) commands
-(evil-ex-define-cmd "E" 'dired-mode)
-
 
 ;;;; Misc useful keybindings
 
