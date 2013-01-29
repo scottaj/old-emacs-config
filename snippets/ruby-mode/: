@@ -1,4 +1,4 @@
-#name : :key => "value"
+#name : key: "value"
 # key: :
 # --
-:${key} => ${"value"}
+${key}: ${"value"}

@@ -1,0 +1,4 @@
+#name : regexp
+# key: /
+# --
+/^${1:regexp}$/$0
