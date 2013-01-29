@@ -2,9 +2,10 @@
 (setq ring-bell-function 'ignore)
 
 
-;; Delete trailing whitespace
-(add-hook 'before-save-hook 'delete-trailing-whitespace)
-
+;; Cleanup whitespace
+(setq whitespace-action '(auto-cleanup)) ;; automatically clean up bad whitespace
+(setq whitespace-style '(trailing space-before-tab indentation empty space-after-tab)) ;; only show bad whitespace
+(global-whitespace-mode t)
 
 
 ;; Comment or uncomment a marked region or your current line if there is no mark set
@@ -13,7 +14,7 @@
   (interactive
    (if mark-active (list (region-beginning) (region-end))
      (list (line-beginning-position)
-	   (line-beginning-position 2)))))
+           (line-beginning-position 2)))))
 (global-set-key (kbd "C-c c") 'comment-or-uncomment-region)
 
 
@@ -79,3 +80,6 @@
       (setenv "PATH" path-from-shell)
       (setq exec-path (split-string path-from-shell path-separator))))
   (when (equal system-type 'darwin) (set-exec-path-from-shell-PATH)))
+
+;; Flyspell
+(add-hook 'text-mode-hook (lambda ( (flyspell-mode t))))

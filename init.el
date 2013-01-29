@@ -71,9 +71,8 @@
 
                 ;; Eye candy
 		rainbow-delimiters
-		color-theme
 		pretty-mode
-
+                solarized-theme
 
                 ;; Ruby
 		rvm
@@ -94,5 +93,5 @@
 (load-file "~/.emacs.d/user.el")
 
 
-;; Load variables and faces set via custom
-(load-file "~/.emacs.d/custom.el")
+(setq custom-file "~/.emacs.d/custom.el")
+(load custom-file)
