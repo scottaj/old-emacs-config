@@ -37,5 +37,5 @@
 ;; Show undo tree
 (define-key evil-normal-state-map (kbd ",u") 'undo-tree)
 
-;; Bind auto completion
-(define-key evil-insert-state-map (kbd "C-x C-o") 'ac-complete)
+;; Bind auto completion in insert mode, this clobbers the normal "next line" keybinding
+(define-key evil-insert-state-map (kbd "C-n") 'auto-complete)
