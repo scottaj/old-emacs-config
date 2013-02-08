@@ -29,13 +29,13 @@
 
                 ;; Extra functionality
                 textmate ; Common Textmate commands and keybindings.
-                wrap-region ; Wrap a selection in a delimiter like quotes or braces
+                ;; wrap-region ; Wrap a selection in a delimiter like quotes or braces
                 magit ; Git plugin
-                idle-highlight-mode ; Highlight all instances of word under cursor
+                ;; idle-highlight-mode ; Highlight all instances of word under cursor
                 dired-single ; reuse same dired buffer when changing directories
                 smex ; M-x on crack
                 fastnav ; fast zapping and marking
-                lorem-ipsum ; Generate dummy text
+                ;; lorem-ipsum ; Generate dummy text
                 popup-kill-ring ; Interactively select from kill ring
                 undo-tree ; Better undo/redo
                 emacs-nav ; Tree navigation
@@ -65,22 +65,22 @@
 
 
                 ;; Syntax checking
-                flymake
-                flymake-coffee
-                flymake-sass
-                flymake-css
+                ;; flymake
+                ;; flymake-coffee
+                ;; flymake-sass
+                ;; flymake-css
 
                 ;; Eye candy
-                rainbow-delimiters
-                pretty-mode
-                solarized-theme
+                ;; rainbow-delimiters
+                ;; pretty-mode
+                ;; solarized-theme
 
                 ;; Ruby
                 rvm
-                flymake-ruby
-                inf-ruby
-                inf-ruby-bond
-                ruby-end
+                ;; flymake-ruby
+                ;; inf-ruby
+                ;; inf-ruby-bond
+                ;; ruby-end
                 rspec-mode
                 bundler
                 ))
