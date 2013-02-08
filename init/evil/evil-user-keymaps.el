@@ -15,6 +15,15 @@
 (define-key evil-normal-state-map (kbd ", C-t") 'textmate-clear-cache)
 (define-key evil-normal-state-map (kbd ",l") 'goto-line)
 
+;; Git tools
+;; REQUIRES Magit
+; Open git status buffer
+(define-key evil-normal-state-map (kbd ",gs") 'magit-status) ;; git control panel
+(define-key evil-normal-state-map (kbd ",gh") 'magit-file-log) ; Commit history for current file
+(define-key evil-normal-state-map (kbd ",gb") 'magit-blame-mode) ; Blame for current file
+(define-key evil-normal-state-map (kbd ",gg") 'vc-git-grep) ; Git grep
+
+
 ;; Switch to another open buffer
 (define-key evil-normal-state-map (kbd ",,") 'switch-to-buffer)
 
