@@ -1,4 +1,4 @@
-(setq yas-prompt-functions '(yas/dropdown-prompt yas/ido-prompt))
+(setq yas-prompt-functions '(yas-ido-prompt))
 (setq yas-fallback-behavior 'return-nil)
 (define-key yas-minor-mode-map [(tab)] nil)
 (define-key yas-minor-mode-map (kbd "TAB") nil)
