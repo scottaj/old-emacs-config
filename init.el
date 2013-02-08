@@ -25,64 +25,65 @@
                 ;; Vim
                 evil
                 evil-numbers ; Increment and decrement numbers
-
+                evil-surround ; Work with enclosing delimiters like quotes and braces.
 
                 ;; Extra functionality
                 textmate ; Common Textmate commands and keybindings.
-		wrap-region ; Wrap a selection in a delimiter like quotes or braces
-		magit ; Git plugin
+                wrap-region ; Wrap a selection in a delimiter like quotes or braces
+                magit ; Git plugin
                 idle-highlight-mode ; Highlight all instances of word under cursor
                 dired-single ; reuse same dired buffer when changing directories
-		smex ; M-x on crack
-		fastnav ; fast zapping and marking
+                smex ; M-x on crack
+                fastnav ; fast zapping and marking
                 lorem-ipsum ; Generate dummy text
                 popup-kill-ring ; Interactively select from kill ring
                 undo-tree ; Better undo/redo
                 emacs-nav ; Tree navigation
                 exec-path-from-shell ; Fix shell settings in OSX
-
+                ;; ido-hacks ; Make ido perform better
 
                 ;; Completion and templating
-		auto-complete
+                auto-complete
                 auto-complete-css
                 auto-complete-ruby
                 auto-complete-yasnippet
-		yasnippet
+                yasnippet
 
 
                 ;; Extra language support
-		coffee-mode
-		yaml-mode
-		markdown-mode
+                coffee-mode
+                yaml-mode
+                markdown-mode
                 sass-mode
-		scss-mode
+                scss-mode
                 json
                 mustache-mode
                 haml-mode
-		feature-mode
+                feature-mode
                 rhtml-mode
-		slim-mode
+                slim-mode
 
 
                 ;; Syntax checking
                 flymake
                 flymake-coffee
-
+                flymake-sass
+                flymake-css
 
                 ;; Eye candy
-		rainbow-delimiters
-		pretty-mode
+                rainbow-delimiters
+                pretty-mode
                 solarized-theme
 
                 ;; Ruby
-		rvm
-                Enhanced-Ruby-Mode
+                rvm
+                flymake-ruby
                 inf-ruby
                 inf-ruby-bond
-		ruby-end
+                ruby-end
                 rspec-mode
                 bundler
- 		))
+                ))
 
 (setq el-get-user-package-directory "~/.emacs.d/init")
 (el-get 'sync packages)
