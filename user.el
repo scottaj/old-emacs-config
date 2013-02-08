@@ -82,4 +82,4 @@
   (when (equal system-type 'darwin) (set-exec-path-from-shell-PATH)))
 
 ;; Flyspell
-(add-hook 'text-mode-hook (lambda ( (flyspell-mode t))))
+(add-hook 'text-mode-hook (lambda () (flyspell-mode t)))
