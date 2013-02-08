@@ -1,1 +1,1 @@
-(add-hook 'text-mode-hook (lambda () (idle-highlight-mode t)))
+(add-hook 'prog-mode-hook '(lambda () (idle-highlight-mode t)))
