@@ -44,7 +44,10 @@
 
 ;; Prompt for snippet
 ;; REQUIRES Yasnippet
-(define-key evil-normal-state-map (kbd ", SPC") (lambda () (yas/insert-snippet) (evil-insert-state)))
+(define-key evil-normal-state-map (kbd ", SPC") (lambda ()
+                                                  (interactive)
+                                                  (evil-insert-state)
+                                                  (yas-insert-snippet)))
 
 ;; Find string recursively in files
 (define-key evil-normal-state-map (kbd ",f") 'find-grep)
@@ -54,3 +57,19 @@
 
 ;; Bind auto completion in insert mode, this clobbers the normal "next line" keybinding
 (define-key evil-insert-state-map (kbd "C-n") 'auto-complete)
+
+
+;; Test runners/helpers
+;; RSPEC, requires rspec-mode
+(evil-declare-key 'normal rspec-mode-map (kbd ",ss") 'rspec-verify-single)
+(evil-declare-key 'normal rspec-mode-map (kbd ",sv") 'rspec-verify)
+(evil-declare-key 'normal rspec-mode-map (kbd ",sa") 'rspec-verify-all)
+(evil-declare-key 'normal rspec-mode-map (kbd ",st") 'rspec-toggle-example-pendingness)
+(evil-declare-key 'normal rspec-mode-map (kbd ",sg") 'rspec-toggle-spec-and-target)
+(evil-declare-key 'normal ruby-mode-map (kbd ",sg") 'rspec-toggle-spec-and-target)
+
+;; CUCUMBER, requires feature-mode
+(evil-declare-key 'normal feature-mode-map (kbd ",sg") 'feature-goto-step-definition)
+(evil-declare-key 'normal feature-mode-map (kbd ",ss") 'feature-verify-scenario-at-pos)
+(evil-declare-key 'normal feature-mode-map (kbd ",sv") 'feature-verify-all-scenarios-in-buffer)
+(evil-declare-key 'normal feature-mode-map (kbd ",sa") 'feature-verify-all-scenarios-in-project)
