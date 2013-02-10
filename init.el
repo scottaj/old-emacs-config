@@ -40,7 +40,7 @@
                 undo-tree ; Better undo/redo
                 emacs-nav ; Tree navigation
                 exec-path-from-shell ; Fix shell settings in OSX
-                ;; ido-hacks ; Make ido perform better
+                ido-hacks ; Make ido perform better
 
                 ;; Completion and templating
                 auto-complete
