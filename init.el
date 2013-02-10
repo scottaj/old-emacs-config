@@ -65,10 +65,10 @@
 
 
                 ;; Syntax checking
-                ;; flymake
-                ;; flymake-coffee
-                ;; flymake-sass
-                ;; flymake-css
+                flymake
+                flymake-coffee
+                flymake-sass
+                flymake-css
 
                 ;; Eye candy
                 ;; rainbow-delimiters
@@ -77,8 +77,8 @@
 
                 ;; Ruby
                 rvm
-                ;; flymake-ruby
-                ;; inf-ruby
+                flymake-ruby
+                inf-ruby
                 ;; inf-ruby-bond
                 ;; ruby-end
                 rspec-mode
