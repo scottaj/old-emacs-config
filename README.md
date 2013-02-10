@@ -42,7 +42,7 @@ Some of the features included in this config require external programs to be pre
  > whichever of the 2 syntaxes you are using.
 
  * CSS syntax checking
- > Requires *csslint* executable.
+ > Requires **csslint** executable.
 
 If you wish to install this configuration to another directory (for example if you want to share the configuration between different users of the same machine) then there are a couple of things you need to do.
  1. Create a *~/.emacs* file in every home directory where you want to load the config.
@@ -55,17 +55,17 @@ If you wish to install this configuration to another directory (for example if y
  1. Modify the following two lines in the downloaded init.el file:
 
 ```lisp
- (load-file "~/.emacs.d/user.el") => load-file "/path.to/downloaded/user.el" :
- (load-file "~/.emacs.d/custom.el") => load-file "/path.to/downloaded/custom.el" :
+ (load-file "~/.emacs.d/user.el") => ( load-file "/path.to/downloaded/user.el" )
+ (load-file "~/.emacs.d/custom.el") => ( load-file "/path.to/downloaded/custom.el" )
  ```
 
  And make sure that the download custom.el is writable by every user that will be using it.
  1. Modify the following three lines in the downloaded init/init-evil.el:
 
 ```lisp
- (load-file "~/.emacs.d/init/evil/evil-user-settings.el") => load-file "/path/to/downloaded/init/evil/evil-user-settings.el" :
- (load-file "~/.emacs.d/init/evil/evil-user-keymaps.el") => load-file "/path/to/downloaded/init/evil/evil-user-keymaps.el" :
- (load-file "~/.emacs.d/init/evil/evil-user-misc.el") => load-file "/path/to/downloaded/init/evil/evil-user-misc.el" :
+ (load-file "~/.emacs.d/init/evil/evil-user-settings.el") => ( load-file "/path/to/downloaded/init/evil/evil-user-settings.el" )
+ (load-file "~/.emacs.d/init/evil/evil-user-keymaps.el") => ( load-file "/path/to/downloaded/init/evil/evil-user-keymaps.el" )
+ (load-file "~/.emacs.d/init/evil/evil-user-misc.el") => ( load-file "/path/to/downloaded/init/evil/evil-user-misc.el" )
 ```
 
 ## Keybindings
@@ -82,7 +82,7 @@ You will also see key notations in the style: _C-&lt;somekey&gt;_, _M-&lt;someke
 
 ### File/project navigation
 
-_Open a directory navigation buffer (this buffer has a number of useful keybindings that you can view by pressing &lt; ? &gt;)_
+_Open a directory navigation buffer (this buffer has a number of useful keybindings that you can view by pressing **?**)_
  > : **s-r**
  > _normal-state_ : **,n**
 
