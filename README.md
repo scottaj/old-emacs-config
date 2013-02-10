@@ -84,24 +84,28 @@ You will also see key notations in the style: _C-&lt;somekey&gt;_, _M-&lt;someke
 
 _Open a directory navigation buffer (this buffer has a number of useful keybindings that you can view by pressing **?**)_
  > : **s-r**
+
  > _normal-state_ : **,n**
 
 ***
 
 _Jump to file in project with fuzzy completion (Project determined by presence of source control directory, Rakefile, etc.)_
  > : **s-t**
+
  > _normal-state_ : **,t**
 
 ***
 
-_Clear jump-to-file cache (needed if you add new files to the project while Emacs is open)
+_ Clear jump-to-file cache (needed if you add new files to the project while Emacs is open)
  > : **M-s-t**
+
  > _normal-state_ : **,C-t**
 
 ***
 
 _Jump to symbol in current file_
  > : **s-T**
+
  > _normal-state_ : **,T**
 
 ***
@@ -113,6 +117,7 @@ _Switch to another currently open buffer_
 
 _Open Git status buffer for current repository (q to close). This status buffer serves as a kind of Git "control panel" and has many useful keybindings. For an overview see [here](http://philjackson.github.com/magit/magit.html)_
  > : **s-ESC**
+
  > _normal-state_ : **,gs**
 
 ***
@@ -134,18 +139,21 @@ _Do a git grep in the current project_
 
 _Verify test under cursor_
  > rspec-mode : : **C-c ,s**
+
  > feature-mode, rspec-mode : _normal-state_ : **,ss**
 
 ***
 
 _Verify all tests in current file_
  > rspec-mode : : **C-c ,v**
+
  > feature-mode, rspec-mode : _normal-state_ : **,sv**
 
 ***
 
 _Verify all tests in project_
  > rspec-mode : : **C-c ,a**
+
  > feature-mode, rspec-mode : _normal-state_ : **,sa**
 
 ***
