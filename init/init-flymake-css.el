@@ -1,1 +1,1 @@
-(add-hook 'css-mode-hook 'flymake-css)
+(add-hook 'css-mode-hook 'flymake-css-load)
