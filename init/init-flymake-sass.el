@@ -1,2 +1,2 @@
-(add-hook 'sass-mode-hook 'flymake-sass)
-(add-hook 'scss-mode-hook 'flymake-scss)
+(add-hook 'sass-mode-hook 'flymake-sass-load)
+(add-hook 'scss-mode-hook 'flymake-sass-load)
