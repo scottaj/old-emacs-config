@@ -207,3 +207,6 @@ _Jump to the step definition for the step under the cursor_
 
 _Start a Ruby REPL from a Ruby buffer_
 > ruby-mode : : **C-c C-s**
+
+_Insert a code snippet template to fill in_
+> _normal-state_ : **,SPACE**
