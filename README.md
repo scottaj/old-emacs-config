@@ -50,6 +50,8 @@ Some of the features included in this config require external programs to be pre
  * HAML syntax checking
  > Requires HAML gem in a place emacs can find it.
 
+ * RVM
+ > Many of the Ruby related modes work much better if you are using RVM and have a .rvmrc file in your project.
 
 If you wish to install this configuration to another directory (for example if you want to share the configuration between different users of the same machine) then there are a couple of things you need to do.
  1. Create a *~/.emacs* file in every home directory where you want to load the config.
@@ -99,11 +101,12 @@ Following is a listing of many of the useful non-standard keybindings included i
 When discussing keybindings, it is important to note the specific modes and states to which they apply. Therefore, we will use the following notation to list keybindings:
 
  > _brief description_
+
  > Emacs-mode : _Vim state_ : **keybinding**
 
 If either _Emacs mode_ or _Vim state_ is blank, you can assume that the keybinding works in all states/modes.
 
-You will also see key notations in the style: _C-&lt;somekey&gt;_, _M-&lt;somekey&gt;, and s-&lt;somekey&gt;. These are standard Emacs notations for _Control_, _Meta_, and _super_. These three keys are generally bound to the Control key, Option/alt key, and Command/Windows key respectively.
+You will also see key notations in the style: *C-&lt;somekey&gt;*, _M-&lt;somekey&gt;, and s-&lt;somekey&gt;. These are standard Emacs notations for *Control*, _Meta_, and _super_. These three keys are generally bound to the Control key, Option/alt key, and Command/Windows key respectively.
 
 ### File/project navigation
 
@@ -121,7 +124,7 @@ _Jump to file in project with fuzzy completion (Project determined by presence o
 
 ***
 
-_ Clear jump-to-file cache (needed if you add new files to the project while Emacs is open)
+*Clear jump-to-file cache (needed if you add new files to the project while Emacs is open)*
  > : **M-s-t**
 
  > _normal-state_ : **,C-t**
