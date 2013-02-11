@@ -62,13 +62,14 @@
                 feature-mode
                 rhtml-mode
                 slim-mode
-
+                less-css-mode
 
                 ;; Syntax checking
                 flymake
                 flymake-coffee
                 flymake-sass
                 flymake-css
+                flymake-haml
 
                 ;; Eye candy
                 rainbow-delimiters
