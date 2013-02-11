@@ -38,11 +38,18 @@ Some of the features included in this config require external programs to be pre
  > are present it will default to **coffeelint**.
 
  * Sass/Scss syntax checking
- > Requires a **sass** executable, it will automatically set the flags to check
+ > Requires sass gem in a place emacs can find it, it will automatically set the flags to check
  > whichever of the 2 syntaxes you are using.
 
  * CSS syntax checking
  > Requires **csslint** executable.
+
+ * LESS syntax checking
+ > Requires **lessc** executable.
+
+ * HAML syntax checking
+ > Requires HAML gem in a place emacs can find it.
+
 
 If you wish to install this configuration to another directory (for example if you want to share the configuration between different users of the same machine) then there are a couple of things you need to do.
  1. Create a *~/.emacs* file in every home directory where you want to load the config.
@@ -67,6 +74,24 @@ If you wish to install this configuration to another directory (for example if y
  (load-file "~/.emacs.d/init/evil/evil-user-keymaps.el") => ( load-file "/path/to/downloaded/init/evil/evil-user-keymaps.el" )
  (load-file "~/.emacs.d/init/evil/evil-user-misc.el") => ( load-file "/path/to/downloaded/init/evil/evil-user-misc.el" )
 ```
+
+## Files and Directories
+ 1. init.el
+ > This is the main entry point for emacs. This file initializes el-get, lists the 3rd party packages to install, and loads several other initialization files.
+ > You should not put any actual configuration code in this file, other than adding new el-get packages.
+
+ 1. custom.el
+ > This file is where emacs is configured to save changes made through its customize interface, you should not edit anything in there directly unless you know what you are doing.
+
+ 1. user.el
+ > This is the home of all generic customizations to built in emacs functionality. If you aren't sure where to put something, this is probably a good spot.
+
+ 1. init/
+ > This directory contains initialization files for el-get packages. Every package that is configured should have a **init-package-name.el** file.
+
+ 1. snippets/
+ > This is the directory where you should put all yasnippet code snippet files.
+
 
 ## Keybindings
 Following is a listing of many of the useful non-standard keybindings included in this config. Since this config uses evil-mode to emulate Vim's modal editing. Since "mode" has a different meaning in Emacs, we will refer to Vim-style "modes" as "states", e.g. what would be "normal mode" in Vim will be referred to as "normal state".
