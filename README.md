@@ -108,6 +108,10 @@ If either _Emacs mode_ or _Vim state_ is blank, you can assume that the keybindi
 
 You will also see key notations in the style: *C-&lt;somekey&gt;*, _M-&lt;somekey&gt;, and s-&lt;somekey&gt;. These are standard Emacs notations for *Control*, _Meta_, and _super_. These three keys are generally bound to the Control key, Option/alt key, and Command/Windows key respectively.
 
+This is not a comprehensive list of all the custom keybindings, just some of the more interesting ones that I use alot.
+
+In most cases, I have tried not to clobber Emacs default keybindings in evil insert-state. The one notable exception is **C-n**, which is bound to auto-complete text rather than next line. This is to increase compatibility with an existing Vim configuration I was porting over into this config.
+
 ### File/project navigation
 
 _Open a directory navigation buffer (this buffer has a number of useful keybindings that you can view by pressing **?**)_
@@ -197,4 +201,9 @@ _Jump between a ruby file and it's spec or vice versa_
 ***
 
 _Jump to the step definition for the step under the cursor_
- > feature-mode : _normal-state_ : **,sg**
+> feature-mode : _normal-state_ : **,sg**
+
+### MISC
+
+_Start a Ruby REPL from a Ruby buffer_
+> ruby-mode : : **C-c C-s**
