@@ -44,6 +44,13 @@
   (set-face-attribute 'default nil :height 160)) ; 160 means 16pt
 
 
+;; Vertical ido-prompt
+(setq ido-decorations (quote
+                       ("\n-> " "" "\n   " "\n   ..." "[" "]" " [No match]" " [Matched]" " [Not readable]" " [Too big]" " [Confirm]")))
+(defun ido-disable-line-truncation ()
+  (set (make-local-variable 'truncate-lines) nil))
+(add-hook 'ido-minibuffer-setup-hook 'ido-disable-line-truncation)
+
 
 ;; Switch windows with SHIFT+arrow keys
 (windmove-default-keybindings)
