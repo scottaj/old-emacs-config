@@ -3,3 +3,4 @@
   (let ((shell-file-name "/bin/bash"))
     ad-do-it))
 (ad-activate 'rspec-compile)
+(setq rspec-use-rvm t)
