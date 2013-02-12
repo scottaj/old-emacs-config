@@ -1,5 +1,5 @@
 ;;;;
-;; This is the main config file, It is loaded first, wutomatically by emacs.
+;; This is the main config file, It is loaded first, automatically by emacs.
 ;; It firsts downloads and initializes packages, then loads custom user code
 ;; and settings.
 ;;;;
@@ -39,7 +39,6 @@
                 popup-kill-ring ; Interactively select from kill ring
                 undo-tree ; Better undo/redo
                 emacs-nav ; Tree navigation
-                exec-path-from-shell ; Fix shell settings in OSX
                 ido-hacks ; Make ido perform better
 
                 ;; Completion and templating
