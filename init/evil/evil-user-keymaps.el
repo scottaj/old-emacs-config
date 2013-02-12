@@ -61,12 +61,16 @@
 
 ;; Test runners/helpers
 ;; RSPEC, requires rspec-mode
+(evil-declare-key 'normal ruby-mode-map (kbd ",ss") 'rspec-verify-single)
+(evil-declare-key 'normal ruby-mode-map (kbd ",sv") 'rspec-verify)
+(evil-declare-key 'normal ruby-mode-map (kbd ",sa") 'rspec-verify-all)
+(evil-declare-key 'normal ruby-mode-map (kbd ",st") 'rspec-toggle-example-pendingness)
+(evil-declare-key 'normal ruby-mode-map (kbd ",sg") 'rspec-toggle-spec-and-target)
 (evil-declare-key 'normal rspec-mode-map (kbd ",ss") 'rspec-verify-single)
 (evil-declare-key 'normal rspec-mode-map (kbd ",sv") 'rspec-verify)
 (evil-declare-key 'normal rspec-mode-map (kbd ",sa") 'rspec-verify-all)
 (evil-declare-key 'normal rspec-mode-map (kbd ",st") 'rspec-toggle-example-pendingness)
 (evil-declare-key 'normal rspec-mode-map (kbd ",sg") 'rspec-toggle-spec-and-target)
-(evil-declare-key 'normal ruby-mode-map (kbd ",sg") 'rspec-toggle-spec-and-target)
 
 ;; CUCUMBER, requires feature-mode
 (evil-declare-key 'normal feature-mode-map (kbd ",sg") 'feature-goto-step-definition)
