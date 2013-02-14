@@ -12,8 +12,7 @@ This config contains add-ons and enhancements to GNU Emacs. It is mostly targete
  * Easy directory navigation and manipulation via Emacs-nav
  * Test runner and navigation support for RSpec and Cucumber
 
-There are 2 branches available for download. The **master** branch contains the exact configuration as I use it on my machine, including fonts, themes, etc.
-The **stripped-down** branch contains the basic enhancements, but removes many of the more superfluous and less general customizations in order to give an easier jumping off point for your own customizations.
+There are 2 branches available for download. The **master** branch contains the basic enhancements, but removes many of the more superfluous and less general customizations in order to give an easier jumping off point for your own customizations. The **al** branch contains the exact configuration as I use it on my machine, including fonts, themes, etc.
 
 ## Installation
 
