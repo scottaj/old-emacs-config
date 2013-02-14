@@ -1,11 +1,11 @@
-;; Turn off Bell
-(setq ring-bell-function 'ignore)
+;; ;; Turn off Bell
+;; (setq ring-bell-function 'ignore)
 
 
-;; Cleanup whitespace
-(setq whitespace-action '(auto-cleanup)) ;; automatically clean up bad whitespace
-(setq whitespace-style '(trailing space-before-tab indentation empty space-after-tab)) ;; only show bad whitespace
-(global-whitespace-mode t)
+;; ;; Cleanup whitespace
+;; (setq whitespace-action '(auto-cleanup)) ;; automatically clean up bad whitespace
+;; (setq whitespace-style '(trailing space-before-tab indentation empty space-after-tab)) ;; only show bad whitespace
+;; (global-whitespace-mode t)
 
 
 ;; Comment or uncomment a marked region or your current line if there is no mark set
@@ -29,19 +29,19 @@
 
 
 ;; Setup handling of backup files.
-(setq backup-directory-alist '(("." . "~/.emacs.d/backup"))
-  backup-by-copying t    ; Don't delink hardlinks
-  version-control t      ; Use version numbers on backups
-  delete-old-versions t  ; Automatically delete excess backups
-  kept-new-versions 10   ; how many of the newest versions to keep
-  kept-old-versions 5    ; and how many of the old
-  )
+;; (setq backup-directory-alist '(("." . "~/.emacs.d/backup"))
+;;   backup-by-copying t    ; Don't delink hardlinks
+;;   version-control t      ; Use version numbers on backups
+;;   delete-old-versions t  ; Automatically delete excess backups
+;;   kept-new-versions 10   ; how many of the newest versions to keep
+;;   kept-old-versions 5    ; and how many of the old
+;;   )
 
 
 ;; Font - I like Adobe Source Code Pro (it's free)
-(when (display-graphic-p)
-  (set-face-attribute 'default nil :font "Source Code Pro")
-  (set-face-attribute 'default nil :height 160)) ; 160 means 16pt
+;; (when (display-graphic-p)
+;;   (set-face-attribute 'default nil :font "Source Code Pro")
+;;   (set-face-attribute 'default nil :height 160)) ; 160 means 16pt
 
 
 ;; Vertical ido-prompt
@@ -53,8 +53,8 @@
 
 
 ;; Switch windows with SHIFT+arrow keys
-(windmove-default-keybindings)
-(global-set-key (kbd "<select>") 'windmove-up)
+;; (windmove-default-keybindings)
+;; (global-set-key (kbd "<select>") 'windmove-up)
 
 
 
@@ -67,14 +67,14 @@
 
 
 ;; Cursor - like a bar, but it can be a block or something
-(setq-default cursor-type 'bar)
+;; (setq-default cursor-type 'bar)
 
 
 
 ;; Break a given line at 80 characters or less
-(fset 'break-line-near-80
-   [?\C-a ?\C-u ?8 ?1 ?\C-f ?\M-b return])
-(global-set-key (kbd "C-|") 'break-line-near-80)
+;; (fset 'break-line-near-80
+   ;; [?\C-a ?\C-u ?8 ?1 ?\C-f ?\M-b return])
+;; (global-set-key (kbd "C-|") 'break-line-near-80)
 
 
 
@@ -89,4 +89,4 @@
   (when (equal system-type 'darwin) (set-exec-path-from-shell-PATH)))
 
 ;; Flyspell
-(add-hook 'text-mode-hook (lambda () (flyspell-mode t)))
+;; (add-hook 'text-mode-hook (lambda () (flyspell-mode t)))
