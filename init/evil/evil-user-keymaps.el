@@ -83,8 +83,15 @@
 (evil-declare-key 'normal rspec-mode-map (kbd ",st") 'rspec-toggle-example-pendingness)
 (evil-declare-key 'normal rspec-mode-map (kbd ",sg") 'rspec-toggle-spec-and-target)
 
+
 ;; CUCUMBER, requires feature-mode
 (evil-declare-key 'normal feature-mode-map (kbd ",sg") 'feature-goto-step-definition)
 (evil-declare-key 'normal feature-mode-map (kbd ",ss") 'feature-verify-scenario-at-pos)
 (evil-declare-key 'normal feature-mode-map (kbd ",sv") 'feature-verify-all-scenarios-in-buffer)
 (evil-declare-key 'normal feature-mode-map (kbd ",sa") 'feature-verify-all-scenarios-in-project)
+
+; Atomic Vim keymap
+(evil-declare-key 'normal rspec-mode-map (kbd ",r") 'rspec-verify)
+(evil-declare-key 'normal rspec-mode-map (kbd ",R") 'rspec-verify-single)
+(evil-declare-key 'normal feature-mode-map (kbd ",R") 'feature-verify-scenario-at-pos)
+(evil-declare-key 'normal feature-mode-map (kbd ",r") 'feature-verify-all-scenarios-in-buffer)
