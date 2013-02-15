@@ -10,6 +10,11 @@
 (define-key minibuffer-local-completion-map [escape] 'minibuffer-keyboard-quit)
 (define-key minibuffer-local-must-match-map [escape] 'minibuffer-keyboard-quit)
 (define-key minibuffer-local-isearch-map [escape] 'minibuffer-keyboard-quit)
+(define-key minibuffer-local-map [escape] 'abort-recursive-edit)
+(define-key minibuffer-local-ns-map [escape] 'abort-recursive-edit)
+(define-key minibuffer-local-completion-map [escape] 'abort-recursive-edit)
+(define-key minibuffer-local-must-match-map [escape] 'abort-recursive-edit)
+(define-key minibuffer-local-isearch-map [escape] 'abort-recursive-edit)
 
 
 ;;;; Misc useful keybindings
@@ -48,6 +53,12 @@
                                                   (interactive)
                                                   (evil-insert-state)
                                                   (yas-insert-snippet)))
+
+;; Window moving
+(define-key evil-normal-state-map (kbd "C-w <left>") 'windmove-left)
+(define-key evil-normal-state-map (kbd "C-w <right>") 'windmove-right)
+(define-key evil-normal-state-map (kbd "C-w <up>") 'windmove-up)
+(define-key evil-normal-state-map (kbd "C-w <down>") 'windmove-down)
 
 ;; Find string recursively in files
 (define-key evil-normal-state-map (kbd ",f") 'find-grep)
