@@ -61,7 +61,7 @@
 (define-key evil-normal-state-map (kbd "C-w <down>") 'windmove-down)
 
 ;; Find string recursively in files
-(define-key evil-normal-state-map (kbd ",f") 'find-grep)
+(define-key evil-normal-state-map (kbd ",f") 'ack)
 
 ;; Show undo tree
 (define-key evil-normal-state-map (kbd ",u") 'undo-tree)

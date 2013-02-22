@@ -40,6 +40,7 @@
                 undo-tree ; Better undo/redo
                 emacs-nav ; Tree navigation
                 ido-hacks ; Make ido perform better
+                ack ; Use ack for searching
 
                 ;; Completion and templating
                 auto-complete
