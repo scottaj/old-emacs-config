@@ -59,6 +59,7 @@
  '(help-at-pt-display-when-idle (quote (flymake-overlay)) nil (help-at-pt))
  '(help-at-pt-timer-delay 0.5)
  '(highlight-changes-visibility-initial-state nil)
+ '(ido-hacks-mode t)
  '(ido-mode (quote both) nil (ido))
  '(imenu-auto-rescan t)
  '(indent-tabs-mode nil)
