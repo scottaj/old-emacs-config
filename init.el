@@ -41,6 +41,7 @@
                 emacs-nav ; Tree navigation
                 ido-hacks ; Make ido perform better
                 ack ; Use ack for searching
+                paredit ; Lisp paren editing
 
                 ;; Completion and templating
                 auto-complete
@@ -75,6 +76,11 @@
                 rainbow-delimiters
                 pretty-mode
                 solarized-theme
+
+                ;; Clojure
+                clojure-mode
+                nrepl
+                ac-nrepl
 
                 ;; Ruby
                 rvm
