@@ -5,7 +5,6 @@
 ;;;;
 
 
-
 ;;;;;;
 ;; Initialize el-get
 ;;;;;;
@@ -29,7 +28,6 @@
 
                 ;; Extra functionality
                 textmate ; Common Textmate commands and keybindings.
-                wrap-region ; Wrap a selection in a delimiter like quotes or braces
                 magit ; Git plugin
                 idle-highlight-mode ; Highlight all instances of word under cursor
                 dired-single ; reuse same dired buffer when changing directories
@@ -42,6 +40,7 @@
                 ido-hacks ; Make ido perform better
                 ack ; Use ack for searching
                 paredit ; Lisp paren editing
+                autopair ;; Auto close delimiters.
 
                 ;; Completion and templating
                 auto-complete
