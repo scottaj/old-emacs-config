@@ -1,6 +1,9 @@
 ;; Clear insert state bindings.
 (setcdr evil-insert-state-map nil)
 
+;; Don't wait for any other keys after escape is pressed.
+(setq evil-esc-delay 0)
+
 ;; Make sure escape gets back to normal state and quits things.
 (define-key evil-insert-state-map [escape] 'evil-normal-state)
 (define-key evil-visual-state-map [escape] 'evil-normal-state)
