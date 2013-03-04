@@ -1,0 +1,5 @@
+(:name emacs-nav
+       :description "File tree browser"
+       :type github
+       :pkgname "scottaj/emacs-nav"
+       :features nav)

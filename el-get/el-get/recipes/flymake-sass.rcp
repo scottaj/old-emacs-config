@@ -1,0 +1,4 @@
+(:name flymake-sass
+       :type github
+       :pkgname "purcell/flymake-sass"
+       :description "Flymake handler for sass files")

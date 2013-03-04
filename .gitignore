@@ -5,9 +5,7 @@
 *.swp
 *.swo
 ac-comphist.dat
-el-get/
 semanticdb/
 url/
-*.elc
 eshell/
 /places

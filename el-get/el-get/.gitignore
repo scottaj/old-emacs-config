@@ -1,0 +1,4 @@
+*.elc
+*~
+recipes/emacswiki/*
+recipes/elpa/*

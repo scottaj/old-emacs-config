@@ -1,0 +1,5 @@
+(:name ack
+       :type github
+       :pkgname "leoliu/ack-el"
+       :description "Use ack where you might usually use grep."
+       :features ack)

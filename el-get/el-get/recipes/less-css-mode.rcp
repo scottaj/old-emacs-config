@@ -1,0 +1,5 @@
+(:name less-css-mode
+       :type github
+       :pkgname "purcell/less-css-mode"
+       :description "LESS CSS support"
+       :post-init (add-to-list 'auto-mode-alist '("\\.less$" . less-css-mode)))
