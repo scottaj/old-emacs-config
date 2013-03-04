@@ -1,0 +1,1 @@
+(ido-hacks-mode t)
