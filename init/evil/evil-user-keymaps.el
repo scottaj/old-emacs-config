@@ -22,6 +22,9 @@
 
 ;;;; Misc useful keybindings
 
+;; Open file
+(define-key evil-normal-state-map (kbd ",e") 'ido-find-file)
+
 ;; Jump to file in project
 ;; REQUIRES textmate-mode.el
 (define-key evil-normal-state-map (kbd ",t") 'textmate-goto-file)
