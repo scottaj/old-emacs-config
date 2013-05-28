@@ -4,7 +4,8 @@
 
 
 ;;;### (autoloads (ac-nrepl-popup-doc ac-nrepl-setup ac-nrepl-clear-class-cache)
-;;;;;;  "ac-nrepl/ac-nrepl" "ac-nrepl/ac-nrepl.el" (20788 11198))
+;;;;;;  "ac-nrepl/ac-nrepl" "ac-nrepl/ac-nrepl.el" (20822 2304 0
+;;;;;;  0))
 ;;; Generated autoloads from ac-nrepl/ac-nrepl.el
 
 (autoload 'ac-nrepl-clear-class-cache "ac-nrepl/ac-nrepl" "\
@@ -54,40 +55,18 @@ A popup alternative to `nrepl-doc'.
 
 ;;;***
 
-;;;### (autoloads (ack) "ack/ack" "ack/ack.el" (20788 10999))
+;;;### (autoloads (ack) "ack/ack" "ack/ack.el" (20848 40492 0 0))
 ;;; Generated autoloads from ack/ack.el
 
 (autoload 'ack "ack/ack" "\
-Run ack using COMMAND-ARGS and collect output in a buffer.
-When called interactively, the value of DIRECTORY is provided by
-`ack-default-directory-function'.
 
-The following keys are available while reading from the
-minibuffer:
 
-\\{ack-minibuffer-local-map}
-
-\(fn COMMAND-ARGS &optional DIRECTORY)" t nil)
-
-;;;***
-
-;;;### (autoloads (pcomplete/ack) "ack/pcmpl-ack" "ack/pcmpl-ack.el"
-;;;;;;  (20788 10999))
-;;; Generated autoloads from ack/pcmpl-ack.el
-
-(autoload 'pcomplete/ack "ack/pcmpl-ack" "\
-Completion for the `ack' command.
-Start an argument with '-' to complete short options and '--' for
-long options.
-
-\(fn)" nil nil)
-
-(defalias 'pcomplete/ack-grep 'pcomplete/ack)
+\(fn COMMAND-ARGS)" t nil)
 
 ;;;***
 
 ;;;### (autoloads (auto-complete) "auto-complete/auto-complete" "auto-complete/auto-complete.el"
-;;;;;;  (20788 11007))
+;;;;;;  (20848 40492 0 0))
 ;;; Generated autoloads from auto-complete/auto-complete.el
 
 (autoload 'auto-complete "auto-complete/auto-complete" "\
@@ -98,7 +77,7 @@ Start auto-completion at current point.
 ;;;***
 
 ;;;### (autoloads (autopair-global-mode autopair-mode) "autopair/autopair"
-;;;;;;  "autopair/autopair.el" (20788 11002))
+;;;;;;  "autopair/autopair.el" (20824 40784 0 0))
 ;;; Generated autoloads from autopair/autopair.el
 
 (autoload 'autopair-mode "autopair/autopair" "\
@@ -130,8 +109,8 @@ See `autopair-mode' for more information on Autopair mode.
 ;;;***
 
 ;;;### (autoloads (bundle-update bundle-install bundle-check bundle-console
-;;;;;;  bundle-open) "bundler/bundler" "bundler/bundler.el" (20788
-;;;;;;  11214))
+;;;;;;  bundle-open) "bundler/bundler" "bundler/bundler.el" (20822
+;;;;;;  2316 0 0))
 ;;; Generated autoloads from bundler/bundler.el
 
 (autoload 'bundle-open "bundler/bundler" "\
@@ -162,7 +141,7 @@ Run bundle update for the current bundle.
 ;;;***
 
 ;;;### (autoloads (clojure-mode) "clojure-mode/clojure-mode" "clojure-mode/clojure-mode.el"
-;;;;;;  (20788 11192))
+;;;;;;  (20848 40492 0 0))
 ;;; Generated autoloads from clojure-mode/clojure-mode.el
 
 (autoload 'clojure-mode "clojure-mode/clojure-mode" "\
@@ -185,6 +164,10 @@ if that value is non-nil.
 
 (add-to-list 'auto-mode-alist '("\\.clj\\'" . clojure-mode))
 
+(add-to-list 'auto-mode-alist '("\\.dtm\\'" . clojure-mode))
+
+(add-to-list 'auto-mode-alist '("\\.edn\\'" . clojure-mode))
+
 (add-to-list 'interpreter-mode-alist '("jark" . clojure-mode))
 
 (add-to-list 'interpreter-mode-alist '("cake" . clojure-mode))
@@ -192,7 +175,7 @@ if that value is non-nil.
 ;;;***
 
 ;;;### (autoloads (clojure-test-mode) "clojure-mode/clojure-test-mode"
-;;;;;;  "clojure-mode/clojure-test-mode.el" (20788 11192))
+;;;;;;  "clojure-mode/clojure-test-mode.el" (20822 2300 0 0))
 ;;; Generated autoloads from clojure-mode/clojure-test-mode.el
 
 (autoload 'clojure-test-mode "clojure-mode/clojure-test-mode" "\
@@ -211,7 +194,7 @@ with a \"test.\" bit on it." (let ((ns (clojure-find-package))) (when (and ns (s
 ;;;***
 
 ;;;### (autoloads (coffee-mode) "coffee-mode/coffee-mode" "coffee-mode/coffee-mode.el"
-;;;;;;  (20788 11025))
+;;;;;;  (20848 40493 0 0))
 ;;; Generated autoloads from coffee-mode/coffee-mode.el
 
 (autoload 'coffee-mode "coffee-mode/coffee-mode" "\
@@ -227,9 +210,45 @@ Major mode for editing CoffeeScript.
 
 ;;;***
 
+;;;### (autoloads (dash-at-point dash-at-point-mode-alist dash-at-point)
+;;;;;;  "dash-at-point/dash-at-point" "dash-at-point/dash-at-point.el"
+;;;;;;  (20848 40493 0 0))
+;;; Generated autoloads from dash-at-point/dash-at-point.el
+
+(let ((loads (get 'dash-at-point 'custom-loads))) (if (member '"dash-at-point/dash-at-point" loads) nil (put 'dash-at-point 'custom-loads (cons '"dash-at-point/dash-at-point" loads))))
+
+(defvar dash-at-point-mode-alist '((c++-mode . "cpp") (c-mode . "c") (coffee-mode . "coffee") (common-lisp-mode . "lisp") (cperl-mode . "perl") (css-mode . "css") (emacs-lisp-mode . "elisp") (erlang-mode . "erlang") (go-mode . "go") (haskell-mode . "haskell") (html-mode . "html") (java-mode . "java") (js2-mode . "javascript") (lua-mode . "lua") (objc-mode . "iphoneos") (perl-mode . "perl") (php-mode . "php") (python-mode . "python3") (ruby-mode . "ruby") (scala-mode . "scala") (vim-mode . "vim")) "\
+Alist which maps major modes to Dash docset tags.
+Each entry is of the form (MAJOR-MODE . DOCSET-TAG) where
+MAJOR-MODE is a symbol and DOCSET-TAG is a corresponding tag
+for one or more docsets in Dash.")
+
+(custom-autoload 'dash-at-point-mode-alist "dash-at-point/dash-at-point" t)
+
+(defvar dash-at-point-docset nil "\
+Variable used to specify the docset for the current buffer.
+Users can set this to override the default guess made using
+`dash-at-point-mode-alist', allowing the docset to be determined
+programatically.
+
+For example, Ruby on Rails programmers might add an \"allruby\"
+tag to the Rails, Ruby and Rubygems docsets in Dash, and then add
+code to `rinari-minor-mode-hook' or `ruby-on-rails-mode-hook'
+which sets this variable to \"allruby\" so that Dash will search
+the combined docset.")
+
+(autoload 'dash-at-point "dash-at-point/dash-at-point" "\
+Search for the word at point in Dash.
+If the optional prefix argument EDIT-SEARCH is specified,
+the user will be prompted to edit the search string first.
+
+\(fn &optional EDIT-SEARCH)" t nil)
+
+;;;***
+
 ;;;### (autoloads (dired-single-toggle-buffer-name dired-single-magic-buffer
 ;;;;;;  dired-single-buffer-mouse dired-single-buffer) "dired-single/dired-single"
-;;;;;;  "dired-single/dired-single.el" (20788 10986))
+;;;;;;  "dired-single/dired-single.el" (20848 40530 0 0))
 ;;; Generated autoloads from dired-single/dired-single.el
 
 (autoload 'dired-single-buffer "dired-single/dired-single" "\
@@ -284,7 +303,7 @@ Will also seek to uniquify the 'real' buffer name.
 
 ;;;### (autoloads (el-get-checksum el-get-make-recipes el-get-cd
 ;;;;;;  el-get-self-update el-get-update-all el-get-version) "el-get/el-get"
-;;;;;;  "el-get/el-get.el" (20788 10872))
+;;;;;;  "el-get/el-get.el" (20876 65396 0 0))
 ;;; Generated autoloads from el-get/el-get.el
 
 (autoload 'el-get-version "el-get/el-get" "\
@@ -321,7 +340,7 @@ Compute the checksum of the given package, and put it in the kill-ring
 ;;;***
 
 ;;;### (autoloads (el-get-list-packages) "el-get/el-get-list-packages"
-;;;;;;  "el-get/el-get-list-packages.el" (20788 10872))
+;;;;;;  "el-get/el-get-list-packages.el" (20876 65396 0 0))
 ;;; Generated autoloads from el-get/el-get-list-packages.el
 
 (autoload 'el-get-list-packages "el-get/el-get-list-packages" "\
@@ -331,27 +350,9 @@ Display a list of packages.
 
 ;;;***
 
-;;;### (autoloads nil "emacs-nav/ack" "emacs-nav/ack.el" (20788 10996))
-;;; Generated autoloads from emacs-nav/ack.el
-
-(defvar ack-history nil)
-
-;;;***
-
-;;;### (autoloads (nav) "emacs-nav/nav" "emacs-nav/nav.el" (20788
-;;;;;;  10996))
-;;; Generated autoloads from emacs-nav/nav.el
-
-(autoload 'nav "emacs-nav/nav" "\
-Opens Nav in a new window to the left of the current one.
-
-\(fn)" t nil)
-
-;;;***
-
 ;;;### (autoloads (evil-numbers/dec-at-pt evil-numbers/inc-at-pt)
 ;;;;;;  "evil-numbers/evil-numbers" "evil-numbers/evil-numbers.el"
-;;;;;;  (20788 10975))
+;;;;;;  (20822 3782 0 0))
 ;;; Generated autoloads from evil-numbers/evil-numbers.el
 
 (autoload 'evil-numbers/inc-at-pt "evil-numbers/evil-numbers" "\
@@ -368,7 +369,7 @@ Decrement the number at point or after point before end-of-line by `amount'
 
 ;;;### (autoloads (global-surround-mode turn-off-surround-mode turn-on-surround-mode
 ;;;;;;  surround-mode surround-change surround-delete) "evil-surround/surround"
-;;;;;;  "evil-surround/surround.el" (20788 10976))
+;;;;;;  "evil-surround/surround.el" (20822 3784 0 0))
 ;;; Generated autoloads from evil-surround/surround.el
 
 (autoload 'surround-delete "evil-surround/surround" "\
@@ -425,10 +426,28 @@ See `surround-mode' for more information on Surround mode.
 
 ;;;***
 
-;;;### (autoloads nil "evil/evil-core" "evil/evil-core.el" (20788
-;;;;;;  10971))
-;;; Generated autoloads from evil/evil-core.el
- (autoload 'evil-mode "evil" "Toggle evil in all buffers" t)
+;;;### (autoloads (exec-path-from-shell-initialize exec-path-from-shell-copy-env)
+;;;;;;  "exec-path-from-shell/exec-path-from-shell" "exec-path-from-shell/exec-path-from-shell.el"
+;;;;;;  (20822 1973 0 0))
+;;; Generated autoloads from exec-path-from-shell/exec-path-from-shell.el
+
+(autoload 'exec-path-from-shell-copy-env "exec-path-from-shell/exec-path-from-shell" "\
+Set the environment variable $NAME from the user's shell.
+
+As a special case, if the variable is $PATH, then `exec-path' and
+`eshell-path-env' are also set appropriately.  Return the value
+of the environment variable.
+
+\(fn NAME)" t nil)
+
+(autoload 'exec-path-from-shell-initialize "exec-path-from-shell/exec-path-from-shell" "\
+Initialize environment from the user's shell.
+
+The values of all the environment variables named in
+`exec-path-from-shell-variables' are set from the corresponding
+values used in the user's shell.
+
+\(fn)" t nil)
 
 ;;;***
 
@@ -444,7 +463,7 @@ See `surround-mode' for more information on Surround mode.
 ;;;;;;  fastnav-jump-to-char-backward fastnav-jump-to-char-forward
 ;;;;;;  fastnav-highlight-read-char-backward fastnav-highlight-read-char
 ;;;;;;  fastnav-get-nth-chars fastnav-search-char-backward fastnav-search-char-forward)
-;;;;;;  "fastnav/fastnav" "fastnav/fastnav.el" (20788 10989))
+;;;;;;  "fastnav/fastnav" "fastnav/fastnav.el" (20822 2167 0 0))
 ;;; Generated autoloads from fastnav/fastnav.el
 
 (autoload 'fastnav-search-char-forward "fastnav/fastnav" "\
@@ -602,7 +621,7 @@ matching the keyboard event.
 ;;;***
 
 ;;;### (autoloads (feature-mode) "feature-mode/feature-mode" "feature-mode/feature-mode.el"
-;;;;;;  (20788 11068))
+;;;;;;  (20822 2269 0 0))
 ;;; Generated autoloads from feature-mode/feature-mode.el
 
 (autoload 'feature-mode "feature-mode/feature-mode" "\
@@ -615,7 +634,7 @@ Major mode for editing plain text stories
 ;;;***
 
 ;;;### (autoloads (flymake-coffee-load) "flymake-coffee/flymake-coffee"
-;;;;;;  "flymake-coffee/flymake-coffee.el" (20788 11075))
+;;;;;;  "flymake-coffee/flymake-coffee.el" (20822 2279 0 0))
 ;;; Generated autoloads from flymake-coffee/flymake-coffee.el
 
 (autoload 'flymake-coffee-load "flymake-coffee/flymake-coffee" "\
@@ -626,7 +645,7 @@ Configure flymake mode to check the current buffer's coffeescript syntax.
 ;;;***
 
 ;;;### (autoloads (flymake-css-load flymake-css-lint-command) "flymake-css/flymake-css"
-;;;;;;  "flymake-css/flymake-css.el" (20788 11078))
+;;;;;;  "flymake-css/flymake-css.el" (20822 2281 0 0))
 ;;; Generated autoloads from flymake-css/flymake-css.el
 
 (defvar flymake-css-lint-command "csslint" "\
@@ -642,7 +661,7 @@ Configure flymake mode to check the current buffer's css syntax.
 ;;;***
 
 ;;;### (autoloads (flymake-haml-load) "flymake-haml/flymake-haml"
-;;;;;;  "flymake-haml/flymake-haml.el" (20788 11079))
+;;;;;;  "flymake-haml/flymake-haml.el" (20822 2283 0 0))
 ;;; Generated autoloads from flymake-haml/flymake-haml.el
 
 (autoload 'flymake-haml-load "flymake-haml/flymake-haml" "\
@@ -657,7 +676,7 @@ does not alter flymake's global configuration, so function
 ;;;***
 
 ;;;### (autoloads (flymake-ruby-load) "flymake-ruby/flymake-ruby"
-;;;;;;  "flymake-ruby/flymake-ruby.el" (20788 11202))
+;;;;;;  "flymake-ruby/flymake-ruby.el" (20822 2307 0 0))
 ;;; Generated autoloads from flymake-ruby/flymake-ruby.el
 
 (autoload 'flymake-ruby-load "flymake-ruby/flymake-ruby" "\
@@ -668,7 +687,7 @@ Configure flymake mode to check the current buffer's ruby syntax.
 ;;;***
 
 ;;;### (autoloads (flymake-sass-load) "flymake-sass/flymake-sass"
-;;;;;;  "flymake-sass/flymake-sass.el" (20788 11076))
+;;;;;;  "flymake-sass/flymake-sass.el" (20822 2280 0 0))
 ;;; Generated autoloads from flymake-sass/flymake-sass.el
 
 (autoload 'flymake-sass-load "flymake-sass/flymake-sass" "\
@@ -679,8 +698,8 @@ Configure flymake mode to check the current buffer's sass syntax.
 ;;;***
 
 ;;;### (autoloads (flymake-find-file-hook flymake-mode-off flymake-mode-on
-;;;;;;  flymake-mode) "flymake/flymake" "flymake/flymake.el" (20788
-;;;;;;  11073))
+;;;;;;  flymake-mode) "flymake/flymake" "flymake/flymake.el" (20822
+;;;;;;  2275 0 0))
 ;;; Generated autoloads from flymake/flymake.el
 
 (autoload 'flymake-mode "flymake/flymake" "\
@@ -708,8 +727,78 @@ Turn flymake mode off.
 
 ;;;***
 
+;;;### (autoloads (git-gutter:toggle git-gutter:clear git-gutter
+;;;;;;  git-gutter:previous-hunk git-gutter:next-hunk git-gutter:popup-hunk
+;;;;;;  git-gutter:revert-hunk global-git-gutter-mode git-gutter-mode)
+;;;;;;  "git-gutter/git-gutter" "git-gutter/git-gutter.el" (20822
+;;;;;;  2155 0 0))
+;;; Generated autoloads from git-gutter/git-gutter.el
+
+(autoload 'git-gutter-mode "git-gutter/git-gutter" "\
+Git-Gutter mode
+
+\(fn &optional ARG)" t nil)
+
+(defvar global-git-gutter-mode nil "\
+Non-nil if Global-Git-Gutter mode is enabled.
+See the command `global-git-gutter-mode' for a description of this minor mode.
+Setting this variable directly does not take effect;
+either customize it (see the info node `Easy Customization')
+or call the function `global-git-gutter-mode'.")
+
+(custom-autoload 'global-git-gutter-mode "git-gutter/git-gutter" nil)
+
+(autoload 'global-git-gutter-mode "git-gutter/git-gutter" "\
+Toggle Git-Gutter mode in all buffers.
+With prefix ARG, enable Global-Git-Gutter mode if ARG is positive;
+otherwise, disable it.  If called from Lisp, enable the mode if
+ARG is omitted or nil.
+
+Git-Gutter mode is enabled in all buffers where
+`(lambda nil (when (and (buffer-file-name) (not (memq major-mode git-gutter:disabled-modes))) (git-gutter-mode 1)))' would do it.
+See `git-gutter-mode' for more information on Git-Gutter mode.
+
+\(fn &optional ARG)" t nil)
+
+(autoload 'git-gutter:revert-hunk "git-gutter/git-gutter" "\
+Revert current hunk.
+
+\(fn)" t nil)
+
+(autoload 'git-gutter:popup-hunk "git-gutter/git-gutter" "\
+popup current diff hunk
+
+\(fn &optional DIFFINFO)" t nil)
+
+(autoload 'git-gutter:next-hunk "git-gutter/git-gutter" "\
+Move to next diff hunk
+
+\(fn ARG)" t nil)
+
+(autoload 'git-gutter:previous-hunk "git-gutter/git-gutter" "\
+Move to previous diff hunk
+
+\(fn ARG)" t nil)
+
+(autoload 'git-gutter "git-gutter/git-gutter" "\
+Show diff information in gutter
+
+\(fn)" t nil)
+
+(autoload 'git-gutter:clear "git-gutter/git-gutter" "\
+clear diff information in gutter
+
+\(fn)" t nil)
+
+(autoload 'git-gutter:toggle "git-gutter/git-gutter" "\
+toggle to show diff information
+
+\(fn)" t nil)
+
+;;;***
+
 ;;;### (autoloads (haml-mode) "haml-mode/haml-mode" "haml-mode/haml-mode.el"
-;;;;;;  (20788 11037))
+;;;;;;  (20822 2263 0 0))
 ;;; Generated autoloads from haml-mode/haml-mode.el
 
 (autoload 'haml-mode "haml-mode/haml-mode" "\
@@ -724,7 +813,8 @@ Major mode for editing Haml files.
 ;;;***
 
 ;;;### (autoloads (idle-highlight-mode) "idle-highlight-mode/idle-highlight-mode"
-;;;;;;  "idle-highlight-mode/idle-highlight-mode.el" (20788 10984))
+;;;;;;  "idle-highlight-mode/idle-highlight-mode.el" (20822 2161
+;;;;;;  0 0))
 ;;; Generated autoloads from idle-highlight-mode/idle-highlight-mode.el
 
 (autoload 'idle-highlight-mode "idle-highlight-mode/idle-highlight-mode" "\
@@ -736,7 +826,7 @@ Idle-Highlight Minor Mode
 
 ;;;### (autoloads (inf-ruby-bond-complete-or-tab inf-ruby-bond-complete)
 ;;;;;;  "inf-ruby-bond/inf-ruby-bond" "inf-ruby-bond/inf-ruby-bond.el"
-;;;;;;  (20788 11209))
+;;;;;;  (20822 2309 0 0))
 ;;; Generated autoloads from inf-ruby-bond/inf-ruby-bond.el
 
 (autoload 'inf-ruby-bond-complete "inf-ruby-bond/inf-ruby-bond" "\
@@ -758,11 +848,17 @@ from irbrc:
 
 ;;;***
 
-;;;### (autoloads (run-ruby inf-ruby inf-ruby-setup-keybindings)
-;;;;;;  "inf-ruby/inf-ruby" "inf-ruby/inf-ruby.el" (20788 11207))
+;;;### (autoloads (run-ruby inf-ruby inf-enh-ruby-setup-keybindings
+;;;;;;  inf-ruby-setup-keybindings) "inf-ruby/inf-ruby" "inf-ruby/inf-ruby.el"
+;;;;;;  (20822 2308 0 0))
 ;;; Generated autoloads from inf-ruby/inf-ruby.el
 
 (autoload 'inf-ruby-setup-keybindings "inf-ruby/inf-ruby" "\
+Set local key defs to invoke inf-ruby from ruby-mode.
+
+\(fn)" nil nil)
+
+(autoload 'inf-enh-ruby-setup-keybindings "inf-ruby/inf-ruby" "\
 Set local key defs to invoke inf-ruby from ruby-mode.
 
 \(fn)" nil nil)
@@ -788,11 +884,60 @@ of `ruby-program-name').  Runs the hooks `inferior-ruby-mode-hook'
 
 (eval-after-load 'ruby-mode '(inf-ruby-setup-keybindings))
 
+(eval-after-load 'enh-ruby-mode '(inf-enh-ruby-setup-keybindings))
+
+;;;***
+
+;;;### (autoloads (js2-imenu-extras-setup) "js2-mode/js2-imenu-extras"
+;;;;;;  "js2-mode/js2-imenu-extras.el" (20822 2228 0 0))
+;;; Generated autoloads from js2-mode/js2-imenu-extras.el
+
+(autoload 'js2-imenu-extras-setup "js2-mode/js2-imenu-extras" "\
+
+
+\(fn)" nil nil)
+
+;;;***
+
+;;;### (autoloads (js2-mode js2-minor-mode) "js2-mode/js2-mode" "js2-mode/js2-mode.el"
+;;;;;;  (20822 2228 0 0))
+;;; Generated autoloads from js2-mode/js2-mode.el
+
+(autoload 'js2-minor-mode "js2-mode/js2-mode" "\
+Minor mode for running js2 as a background linter.
+This allows you to use a different major mode for JavaScript editing,
+such as `espresso-mode', while retaining the asynchronous error/warning
+highlighting features of `js2-mode'.
+
+\(fn &optional ARG)" t nil)
+
+(autoload 'js2-mode "js2-mode/js2-mode" "\
+Major mode for editing JavaScript code.
+
+\(fn)" t nil)
+
+;;;***
+
+;;;### (autoloads (js2r-add-keybindings-with-modifier js2r-add-keybindings-with-prefix)
+;;;;;;  "js2-refactor/js2-refactor" "js2-refactor/js2-refactor.el"
+;;;;;;  (20822 2238 0 0))
+;;; Generated autoloads from js2-refactor/js2-refactor.el
+
+(autoload 'js2r-add-keybindings-with-prefix "js2-refactor/js2-refactor" "\
+
+
+\(fn PREFIX)" nil nil)
+
+(autoload 'js2r-add-keybindings-with-modifier "js2-refactor/js2-refactor" "\
+
+
+\(fn MODIFIER)" nil nil)
+
 ;;;***
 
 ;;;### (autoloads (flymake-less-css-init less-css-mode less-css-compile)
 ;;;;;;  "less-css-mode/less-css-mode" "less-css-mode/less-css-mode.el"
-;;;;;;  (20788 11072))
+;;;;;;  (20822 2273 0 0))
 ;;; Generated autoloads from less-css-mode/less-css-mode.el
 
 (autoload 'less-css-compile "less-css-mode/less-css-mode" "\
@@ -816,8 +961,8 @@ Flymake support for LESS files
 
 ;;;***
 
-;;;### (autoloads (magit-status) "magit/magit" "magit/magit.el" (20788
-;;;;;;  10981))
+;;;### (autoloads (magit-status) "magit/magit" "magit/magit.el" (20848
+;;;;;;  42209 0 0))
 ;;; Generated autoloads from magit/magit.el
 
 (autoload 'magit-status "magit/magit" "\
@@ -835,7 +980,7 @@ when asking for user input.
 ;;;***
 
 ;;;### (autoloads (magit-blame-mode) "magit/magit-blame" "magit/magit-blame.el"
-;;;;;;  (20788 10981))
+;;;;;;  (20848 42209 0 0))
 ;;; Generated autoloads from magit/magit-blame.el
 
 (autoload 'magit-blame-mode "magit/magit-blame" "\
@@ -846,7 +991,7 @@ Display blame information inline.
 ;;;***
 
 ;;;### (autoloads (turn-on-magit-flow magit-flow-mode) "magit/magit-flow"
-;;;;;;  "magit/magit-flow.el" (20788 10981))
+;;;;;;  "magit/magit-flow.el" (20848 42209 0 0))
 ;;; Generated autoloads from magit/magit-flow.el
 
 (autoload 'magit-flow-mode "magit/magit-flow" "\
@@ -862,7 +1007,7 @@ Unconditionally turn on `magit-flow-mode'.
 ;;;***
 
 ;;;### (autoloads (turn-on-magit-stgit magit-stgit-mode) "magit/magit-stgit"
-;;;;;;  "magit/magit-stgit.el" (20788 10981))
+;;;;;;  "magit/magit-stgit.el" (20848 42209 0 0))
 ;;; Generated autoloads from magit/magit-stgit.el
 
 (autoload 'magit-stgit-mode "magit/magit-stgit" "\
@@ -878,7 +1023,7 @@ Unconditionally turn on `magit-stgit-mode'.
 ;;;***
 
 ;;;### (autoloads (turn-on-magit-svn magit-svn-mode) "magit/magit-svn"
-;;;;;;  "magit/magit-svn.el" (20788 10981))
+;;;;;;  "magit/magit-svn.el" (20848 42209 0 0))
 ;;; Generated autoloads from magit/magit-svn.el
 
 (autoload 'magit-svn-mode "magit/magit-svn" "\
@@ -894,7 +1039,7 @@ Unconditionally turn on `magit-svn-mode'.
 ;;;***
 
 ;;;### (autoloads (turn-on-magit-topgit magit-topgit-mode) "magit/magit-topgit"
-;;;;;;  "magit/magit-topgit.el" (20788 10981))
+;;;;;;  "magit/magit-topgit.el" (20848 42209 0 0))
 ;;; Generated autoloads from magit/magit-topgit.el
 
 (autoload 'magit-topgit-mode "magit/magit-topgit" "\
@@ -910,8 +1055,8 @@ Unconditionally turn on `magit-topgit-mode'.
 ;;;***
 
 ;;;### (autoloads (global-magit-wip-save-mode magit-wip-save-mode
-;;;;;;  magit-wip-mode) "magit/magit-wip" "magit/magit-wip.el" (20788
-;;;;;;  10981))
+;;;;;;  magit-wip-mode) "magit/magit-wip" "magit/magit-wip.el" (20848
+;;;;;;  42209 0 0))
 ;;; Generated autoloads from magit/magit-wip.el
 
 (defvar magit-wip-mode nil "\
@@ -961,7 +1106,7 @@ See `magit-wip-save-mode' for more information on Magit-Wip-Save mode.
 ;;;***
 
 ;;;### (autoloads (rebase-mode) "magit/rebase-mode" "magit/rebase-mode.el"
-;;;;;;  (20788 10981))
+;;;;;;  (20848 42209 0 0))
 ;;; Generated autoloads from magit/rebase-mode.el
 
 (autoload 'rebase-mode "magit/rebase-mode" "\
@@ -979,7 +1124,7 @@ running 'man git-rebase' at the command line) for details.
 ;;;***
 
 ;;;### (autoloads (gfm-mode markdown-mode) "markdown-mode/markdown-mode"
-;;;;;;  "markdown-mode/markdown-mode.el" (20788 11028))
+;;;;;;  "markdown-mode/markdown-mode.el" (20822 2260 0 0))
 ;;; Generated autoloads from markdown-mode/markdown-mode.el
 
 (autoload 'markdown-mode "markdown-mode/markdown-mode" "\
@@ -994,8 +1139,219 @@ Major mode for editing GitHub Flavored Markdown files.
 
 ;;;***
 
+;;;### (autoloads (monky-status) "monky/monky" "monky/monky.el" (20822
+;;;;;;  2153 0 0))
+;;; Generated autoloads from monky/monky.el
+
+(autoload 'monky-status "monky/monky" "\
+Show the status of Hg repository.
+
+\(fn &optional DIRECTORY)" t nil)
+
+;;;***
+
+;;;### (autoloads (mc/edit-beginnings-of-lines mc/edit-ends-of-lines
+;;;;;;  mc/edit-lines) "multiple-cursors/mc-edit-lines" "multiple-cursors/mc-edit-lines.el"
+;;;;;;  (20822 2233 0 0))
+;;; Generated autoloads from multiple-cursors/mc-edit-lines.el
+
+(autoload 'mc/edit-lines "multiple-cursors/mc-edit-lines" "\
+Add one cursor to each line of the active region.
+Starts from mark and moves in straight down or up towards the
+line point is on.
+
+\(fn)" t nil)
+
+(autoload 'mc/edit-ends-of-lines "multiple-cursors/mc-edit-lines" "\
+Add one cursor to the end of each line in the active region.
+
+\(fn)" t nil)
+
+(autoload 'mc/edit-beginnings-of-lines "multiple-cursors/mc-edit-lines" "\
+Add one cursor to the beginning of each line in the active region.
+
+\(fn)" t nil)
+
+;;;***
+
+;;;### (autoloads (mc/mark-sgml-tag-pair mc/add-cursor-on-click mc/mark-all-symbols-like-this-in-defun
+;;;;;;  mc/mark-all-words-like-this-in-defun mc/mark-all-like-this-in-defun
+;;;;;;  mc/mark-all-like-this-dwim mc/mark-more-like-this-extended
+;;;;;;  mc/mark-all-in-region mc/mark-all-symbols-like-this mc/mark-all-words-like-this
+;;;;;;  mc/mark-all-like-this mc/unmark-previous-like-this mc/unmark-next-like-this
+;;;;;;  mc/mark-previous-lines mc/mark-next-lines mc/mark-previous-symbol-like-this
+;;;;;;  mc/mark-previous-word-like-this mc/mark-previous-like-this
+;;;;;;  mc/mark-next-symbol-like-this mc/mark-next-word-like-this
+;;;;;;  mc/mark-next-like-this) "multiple-cursors/mc-mark-more" "multiple-cursors/mc-mark-more.el"
+;;;;;;  (20822 2233 0 0))
+;;; Generated autoloads from multiple-cursors/mc-mark-more.el
+
+(autoload 'mc/mark-next-like-this "multiple-cursors/mc-mark-more" "\
+Find and mark the next part of the buffer matching the currently active region
+With negative ARG, delete the last one instead.
+With zero ARG, skip the last one and mark next.
+
+\(fn ARG)" t nil)
+
+(autoload 'mc/mark-next-word-like-this "multiple-cursors/mc-mark-more" "\
+
+
+\(fn ARG)" t nil)
+
+(autoload 'mc/mark-next-symbol-like-this "multiple-cursors/mc-mark-more" "\
+
+
+\(fn ARG)" t nil)
+
+(autoload 'mc/mark-previous-like-this "multiple-cursors/mc-mark-more" "\
+Find and mark the previous part of the buffer matching the currently active region
+With negative ARG, delete the last one instead.
+With zero ARG, skip the last one and mark next.
+
+\(fn ARG)" t nil)
+
+(autoload 'mc/mark-previous-word-like-this "multiple-cursors/mc-mark-more" "\
+
+
+\(fn ARG)" t nil)
+
+(autoload 'mc/mark-previous-symbol-like-this "multiple-cursors/mc-mark-more" "\
+
+
+\(fn ARG)" t nil)
+
+(autoload 'mc/mark-next-lines "multiple-cursors/mc-mark-more" "\
+
+
+\(fn ARG)" t nil)
+
+(autoload 'mc/mark-previous-lines "multiple-cursors/mc-mark-more" "\
+
+
+\(fn ARG)" t nil)
+
+(autoload 'mc/unmark-next-like-this "multiple-cursors/mc-mark-more" "\
+Deselect next part of the buffer matching the currently active region.
+
+\(fn ARG)" t nil)
+
+(autoload 'mc/unmark-previous-like-this "multiple-cursors/mc-mark-more" "\
+Deselect prev part of the buffer matching the currently active region.
+
+\(fn ARG)" t nil)
+
+(autoload 'mc/mark-all-like-this "multiple-cursors/mc-mark-more" "\
+Find and mark all the parts of the buffer matching the currently active region
+
+\(fn)" t nil)
+
+(autoload 'mc/mark-all-words-like-this "multiple-cursors/mc-mark-more" "\
+
+
+\(fn)" t nil)
+
+(autoload 'mc/mark-all-symbols-like-this "multiple-cursors/mc-mark-more" "\
+
+
+\(fn)" t nil)
+
+(autoload 'mc/mark-all-in-region "multiple-cursors/mc-mark-more" "\
+Find and mark all the parts in the region matching the given search
+
+\(fn BEG END)" t nil)
+
+(autoload 'mc/mark-more-like-this-extended "multiple-cursors/mc-mark-more" "\
+Like mark-more-like-this, but then lets you adjust with arrows key.
+The actual adjustment made depends on the final component of the
+key-binding used to invoke the command, with all modifiers removed:
+
+   <up>    Mark previous like this
+   <down>  Mark next like this
+   <left>  If last was previous, skip it
+           If last was next, remove it
+   <right> If last was next, skip it
+           If last was previous, remove it
+
+Then, continue to read input events and further add or move marks
+as long as the input event read (with all modifiers removed)
+is one of the above.
+
+\(fn)" t nil)
+
+(autoload 'mc/mark-all-like-this-dwim "multiple-cursors/mc-mark-more" "\
+Tries to guess what you want to mark all of.
+Can be pressed multiple times to increase selection.
+
+With prefix, it behaves the same as original `mc/mark-all-like-this'
+
+\(fn ARG)" t nil)
+
+(autoload 'mc/mark-all-like-this-in-defun "multiple-cursors/mc-mark-more" "\
+Mark all like this in defun.
+
+\(fn)" t nil)
+
+(autoload 'mc/mark-all-words-like-this-in-defun "multiple-cursors/mc-mark-more" "\
+Mark all words like this in defun.
+
+\(fn)" t nil)
+
+(autoload 'mc/mark-all-symbols-like-this-in-defun "multiple-cursors/mc-mark-more" "\
+Mark all symbols like this in defun.
+
+\(fn)" t nil)
+
+(autoload 'mc/add-cursor-on-click "multiple-cursors/mc-mark-more" "\
+Add a cursor where you click.
+
+\(fn EVENT)" t nil)
+
+(autoload 'mc/mark-sgml-tag-pair "multiple-cursors/mc-mark-more" "\
+Mark the tag we're in and its pair for renaming.
+
+\(fn)" t nil)
+
+;;;***
+
+;;;### (autoloads (mc/sort-regions mc/reverse-regions mc/insert-numbers)
+;;;;;;  "multiple-cursors/mc-separate-operations" "multiple-cursors/mc-separate-operations.el"
+;;;;;;  (20822 2233 0 0))
+;;; Generated autoloads from multiple-cursors/mc-separate-operations.el
+
+(autoload 'mc/insert-numbers "multiple-cursors/mc-separate-operations" "\
+Insert increasing numbers for each cursor, starting at 0 or ARG.
+
+\(fn ARG)" t nil)
+
+(autoload 'mc/reverse-regions "multiple-cursors/mc-separate-operations" "\
+
+
+\(fn)" t nil)
+
+(autoload 'mc/sort-regions "multiple-cursors/mc-separate-operations" "\
+
+
+\(fn)" t nil)
+
+;;;***
+
+;;;### (autoloads (set-rectangular-region-anchor) "multiple-cursors/rectangular-region-mode"
+;;;;;;  "multiple-cursors/rectangular-region-mode.el" (20822 2233
+;;;;;;  0 0))
+;;; Generated autoloads from multiple-cursors/rectangular-region-mode.el
+
+(autoload 'set-rectangular-region-anchor "multiple-cursors/rectangular-region-mode" "\
+Anchors the rectangular region at point.
+
+Think of this one as `set-mark' except you're marking a rectangular region. It is
+an exceedingly quick way of adding multiple cursors to multiple lines.
+
+\(fn)" t nil)
+
+;;;***
+
 ;;;### (autoloads (mustache-mode) "mustache-mode/mustache-mode" "mustache-mode/mustache-mode.el"
-;;;;;;  (20788 11066))
+;;;;;;  (20822 2268 0 0))
 ;;; Generated autoloads from mustache-mode/mustache-mode.el
 
 (autoload 'mustache-mode "mustache-mode/mustache-mode" "\
@@ -1005,9 +1361,26 @@ Major mode for editing GitHub Flavored Markdown files.
 
 ;;;***
 
+;;;### (autoloads nil "nav/ack" "nav/ack.el" (20822 2220 0 0))
+;;; Generated autoloads from nav/ack.el
+
+(defvar ack-history nil)
+
+;;;***
+
+;;;### (autoloads (nav) "nav/nav" "nav/nav.el" (20822 2220 0 0))
+;;; Generated autoloads from nav/nav.el
+
+(autoload 'nav "nav/nav" "\
+Opens Nav in a new window to the left of the current one.
+
+\(fn)" t nil)
+
+;;;***
+
 ;;;### (autoloads (nrepl nrepl-jack-in nrepl-disable-on-existing-clojure-buffers
 ;;;;;;  nrepl-enable-on-existing-clojure-buffers nrepl-interaction-mode)
-;;;;;;  "nrepl/nrepl" "nrepl/nrepl.el" (20788 11196))
+;;;;;;  "nrepl/nrepl" "nrepl/nrepl.el" (20822 2303 0 0))
 ;;; Generated autoloads from nrepl/nrepl.el
 
 (autoload 'nrepl-interaction-mode "nrepl/nrepl" "\
@@ -1048,7 +1421,7 @@ Connect nrepl to HOST and PORT.
 ;;;***
 
 ;;;### (autoloads (paredit-mode) "paredit/paredit" "paredit/paredit.el"
-;;;;;;  (20788 11001))
+;;;;;;  (20822 2225 0 0))
 ;;; Generated autoloads from paredit/paredit.el
 
 (autoload 'paredit-mode "paredit/paredit" "\
@@ -1066,7 +1439,8 @@ Paredit behaves badly if parentheses are imbalanced, so exercise
 
 ;;;### (autoloads (global-rainbow-delimiters-mode rainbow-delimiters-mode-disable
 ;;;;;;  rainbow-delimiters-mode-enable rainbow-delimiters-mode) "rainbow-delimiters/rainbow-delimiters"
-;;;;;;  "rainbow-delimiters/rainbow-delimiters.el" (20788 11081))
+;;;;;;  "rainbow-delimiters/rainbow-delimiters.el" (20822 2284 0
+;;;;;;  0))
 ;;; Generated autoloads from rainbow-delimiters/rainbow-delimiters.el
 
 (autoload 'rainbow-delimiters-mode "rainbow-delimiters/rainbow-delimiters" "\
@@ -1108,8 +1482,8 @@ See `rainbow-delimiters-mode' for more information on Rainbow-Delimiters mode.
 ;;;***
 
 ;;;### (autoloads (rspec-buffer-is-spec-p rspec-verifiable-mode rspec-mode)
-;;;;;;  "rspec-mode/rspec-mode" "rspec-mode/rspec-mode.el" (20788
-;;;;;;  11212))
+;;;;;;  "rspec-mode/rspec-mode" "rspec-mode/rspec-mode.el" (20822
+;;;;;;  2314 0 0))
 ;;; Generated autoloads from rspec-mode/rspec-mode.el
 
 (autoload 'rspec-mode "rspec-mode/rspec-mode" "\
@@ -1134,7 +1508,7 @@ Returns true if the current buffer is a spec
 ;;;***
 
 ;;;### (autoloads (ruby-end-mode) "ruby-end/ruby-end" "ruby-end/ruby-end.el"
-;;;;;;  (20788 11210))
+;;;;;;  (20880 59338 0 0))
 ;;; Generated autoloads from ruby-end/ruby-end.el
 
 (autoload 'ruby-end-mode "ruby-end/ruby-end" "\
@@ -1145,7 +1519,7 @@ Automatic insertion of end blocks for Ruby.
 ;;;***
 
 ;;;### (autoloads (rvm-open-gem rvm-use rvm-activate-corresponding-ruby
-;;;;;;  rvm-use-default) "rvm/rvm" "rvm/rvm.el" (20788 11200))
+;;;;;;  rvm-use-default) "rvm/rvm" "rvm/rvm.el" (20879 52751 0 0))
 ;;; Generated autoloads from rvm/rvm.el
 
 (autoload 'rvm-use-default "rvm/rvm" "\
@@ -1173,7 +1547,7 @@ switch the current ruby version to any ruby, which is installed with rvm
 ;;;***
 
 ;;;### (autoloads (sass-mode) "sass-mode/sass-mode" "sass-mode/sass-mode.el"
-;;;;;;  (20788 11061))
+;;;;;;  (20822 2265 0 0))
 ;;; Generated autoloads from sass-mode/sass-mode.el
 
 (autoload 'sass-mode "sass-mode/sass-mode" "\
@@ -1185,8 +1559,108 @@ Major mode for editing Sass files.
 
 ;;;***
 
+;;;### (autoloads (scala-mode) "scala-mode/tool-support/src/emacs/scala-mode"
+;;;;;;  "scala-mode/tool-support/src/emacs/scala-mode.el" (20848
+;;;;;;  17356 0 0))
+;;; Generated autoloads from scala-mode/tool-support/src/emacs/scala-mode.el
+
+(autoload 'scala-mode "scala-mode/tool-support/src/emacs/scala-mode" "\
+Major mode for editing Scala code.
+When started, run `scala-mode-hook'.
+\\{scala-mode-map}
+
+\(fn)" t nil)
+
+;;;***
+
+;;;### (autoloads (scala-quit-interpreter scala-load-file scala-eval-buffer
+;;;;;;  scala-eval-definition scala-eval-region scala-switch-to-interpreter
+;;;;;;  scala-run-scala scala-interpreter-running-p-1) "scala-mode/tool-support/src/emacs/scala-mode-inf"
+;;;;;;  "scala-mode/tool-support/src/emacs/scala-mode-inf.el" (20848
+;;;;;;  17356 0 0))
+;;; Generated autoloads from scala-mode/tool-support/src/emacs/scala-mode-inf.el
+
+(autoload 'scala-interpreter-running-p-1 "scala-mode/tool-support/src/emacs/scala-mode-inf" "\
+
+
+\(fn)" nil nil)
+
+(autoload 'scala-run-scala "scala-mode/tool-support/src/emacs/scala-mode-inf" "\
+Run a Scala interpreter in an Emacs buffer
+
+\(fn CMD-LINE)" t nil)
+
+(autoload 'scala-switch-to-interpreter "scala-mode/tool-support/src/emacs/scala-mode-inf" "\
+Switch to buffer containing the interpreter
+
+\(fn)" t nil)
+
+(autoload 'scala-eval-region "scala-mode/tool-support/src/emacs/scala-mode-inf" "\
+Send current region to Scala interpreter.
+
+\(fn START END)" t nil)
+
+(autoload 'scala-eval-definition "scala-mode/tool-support/src/emacs/scala-mode-inf" "\
+Send the current 'definition' to the Scala interpreter.
+This function's idea of a definition is the block of text ending
+in the current line (or the first non-empty line going
+backwards), and begins in the first line that is not empty and
+does not start with whitespace or '{'.
+
+For example:
+
+println( \"aja\")
+println( \"hola\" )
+
+if the cursor is somewhere in the second print statement, the
+interpreter should output 'hola'.
+
+In the following case, if the cursor is in the second line, then
+the complete function definition will be send to the interpreter:
+
+def foo =
+  1 + 2
+
+\(fn)" t nil)
+
+(autoload 'scala-eval-buffer "scala-mode/tool-support/src/emacs/scala-mode-inf" "\
+Send whole buffer to Scala interpreter.
+
+\(fn)" t nil)
+
+(autoload 'scala-load-file "scala-mode/tool-support/src/emacs/scala-mode-inf" "\
+Load a file in the Scala interpreter.
+
+\(fn FILE-NAME)" t nil)
+
+(autoload 'scala-quit-interpreter "scala-mode/tool-support/src/emacs/scala-mode-inf" "\
+Quit Scala interpreter.
+
+\(fn)" t nil)
+
+;;;***
+
+;;;### (autoloads (scala-mode) "scala-mode2/scala-mode2" "scala-mode2/scala-mode2.el"
+;;;;;;  (20848 40737 0 0))
+;;; Generated autoloads from scala-mode2/scala-mode2.el
+
+(autoload 'scala-mode "scala-mode2/scala-mode2" "\
+Major mode for editing scala code.
+
+When started, runs `scala-mode-hook'.
+
+\\{scala-mode-map}
+
+\(fn)" t nil)
+
+(add-to-list 'auto-mode-alist '("\\.\\(scala\\|sbt\\)\\'" . scala-mode))
+
+(modify-coding-system-alist 'file "\\.\\(scala\\|sbt\\)\\'" 'utf-8)
+
+;;;***
+
 ;;;### (autoloads (scss-mode) "scss-mode/scss-mode" "scss-mode/scss-mode.el"
-;;;;;;  (20788 11063))
+;;;;;;  (20822 2267 0 0))
 ;;; Generated autoloads from scss-mode/scss-mode.el
 
 (autoload 'scss-mode "scss-mode/scss-mode" "\
@@ -1201,7 +1675,7 @@ Special commands:
 ;;;***
 
 ;;;### (autoloads (slim-mode) "slim-mode/slim-mode" "slim-mode/slim-mode.el"
-;;;;;;  (20788 11070))
+;;;;;;  (20822 2272 0 0))
 ;;; Generated autoloads from slim-mode/slim-mode.el
 
 (autoload 'slim-mode "slim-mode/slim-mode" "\
@@ -1216,7 +1690,7 @@ Major mode for editing Slim files.
 ;;;***
 
 ;;;### (autoloads (smex-initialize smex) "smex/smex" "smex/smex.el"
-;;;;;;  (20788 10987))
+;;;;;;  (20822 2166 0 0))
 ;;; Generated autoloads from smex/smex.el
 
 (autoload 'smex "smex/smex" "\
@@ -1233,7 +1707,8 @@ Major mode for editing Slim files.
 
 ;;;### (autoloads (color-theme-solarized-light color-theme-solarized-dark
 ;;;;;;  color-theme-solarized) "solarized-theme/color-theme-solarized"
-;;;;;;  "solarized-theme/color-theme-solarized.el" (20788 11184))
+;;;;;;  "solarized-theme/color-theme-solarized.el" (20822 2298 0
+;;;;;;  0))
 ;;; Generated autoloads from solarized-theme/color-theme-solarized.el
 
 (autoload 'color-theme-solarized "solarized-theme/color-theme-solarized" "\
@@ -1255,7 +1730,7 @@ Ported to Emacs by Greg Pfeil, http://ethanschoonover.com/solarized.
 ;;;***
 
 ;;;### (autoloads nil "solarized-theme/solarized-definitions" "solarized-theme/solarized-definitions.el"
-;;;;;;  (20788 11184))
+;;;;;;  (20822 2298 0 0))
 ;;; Generated autoloads from solarized-theme/solarized-definitions.el
 
 (when (boundp 'custom-theme-load-path) (add-to-list 'custom-theme-load-path (file-name-as-directory (file-name-directory load-file-name))))
@@ -1263,7 +1738,7 @@ Ported to Emacs by Greg Pfeil, http://ethanschoonover.com/solarized.
 ;;;***
 
 ;;;### (autoloads (textmate-mode) "textmate/textmate" "textmate/textmate.el"
-;;;;;;  (20788 10978))
+;;;;;;  (20822 2145 0 0))
 ;;; Generated autoloads from textmate/textmate.el
 
 (defvar textmate-mode nil "\
@@ -1283,7 +1758,7 @@ TextMate Emulation Minor Mode
 ;;;***
 
 ;;;### (autoloads (global-undo-tree-mode undo-tree-mode) "undo-tree/undo-tree"
-;;;;;;  "undo-tree/undo-tree.el" (20788 10959))
+;;;;;;  "undo-tree/undo-tree.el" (20822 1992 0 0))
 ;;; Generated autoloads from undo-tree/undo-tree.el
 
 (autoload 'undo-tree-mode "undo-tree/undo-tree" "\
@@ -1329,8 +1804,19 @@ See `undo-tree-mode' for more information on Undo-Tree mode.
 
 ;;;***
 
+;;;### (autoloads (web-mode) "web-mode/web-mode" "web-mode/web-mode.el"
+;;;;;;  (20892 13758 0 0))
+;;; Generated autoloads from web-mode/web-mode.el
+
+(autoload 'web-mode "web-mode/web-mode" "\
+Major mode for editing web templates.
+
+\(fn)" t nil)
+
+;;;***
+
 ;;;### (autoloads (yaml-mode yaml) "yaml-mode/yaml-mode" "yaml-mode/yaml-mode.el"
-;;;;;;  (20788 11026))
+;;;;;;  (20822 2258 0 0))
 ;;; Generated autoloads from yaml-mode/yaml-mode.el
 
 (let ((loads (get 'yaml 'custom-loads))) (if (member '"yaml-mode/yaml-mode" loads) nil (put 'yaml 'custom-loads (cons '"yaml-mode/yaml-mode" loads))))
@@ -1347,7 +1833,7 @@ Simple mode to edit YAML.
 ;;;***
 
 ;;;### (autoloads (yas-global-mode yas-minor-mode) "yasnippet/yasnippet"
-;;;;;;  "yasnippet/yasnippet.el" (20788 11023))
+;;;;;;  "yasnippet/yasnippet.el" (20822 2255 0 0))
 ;;; Generated autoloads from yasnippet/yasnippet.el
 
 (autoload 'yas-minor-mode "yasnippet/yasnippet" "\
@@ -1392,30 +1878,57 @@ See `yas-minor-mode' for more information on Yas minor mode.
 ;;;### (autoloads nil nil ("auto-complete-css/auto-complete-css.el"
 ;;;;;;  "auto-complete-ruby/auto-complete-ruby.el" "auto-complete-yasnippet/auto-complete-yasnippet.el"
 ;;;;;;  "auto-complete/auto-complete-config.el" "auto-complete/auto-complete-pkg.el"
-;;;;;;  "autopair/autopair-tests.el" "el-get/el-get-autoloads.el"
-;;;;;;  "el-get/el-get-build.el" "el-get/el-get-byte-compile.el"
-;;;;;;  "el-get/el-get-core.el" "el-get/el-get-custom.el" "el-get/el-get-dependencies.el"
-;;;;;;  "el-get/el-get-install.el" "el-get/el-get-methods.el" "el-get/el-get-notify.el"
-;;;;;;  "el-get/el-get-recipes.el" "el-get/el-get-status.el" "emacs-nav/nav-dev.el"
-;;;;;;  "evil/evil-commands.el" "evil/evil-common.el" "evil/evil-digraphs.el"
-;;;;;;  "evil/evil-ex.el" "evil/evil-integration.el" "evil/evil-macros.el"
-;;;;;;  "evil/evil-maps.el" "evil/evil-pkg.el" "evil/evil-repeat.el"
-;;;;;;  "evil/evil-search.el" "evil/evil-states.el" "evil/evil-tests.el"
-;;;;;;  "evil/evil-types.el" "evil/evil-vars.el" "evil/evil.el" "feature-mode/feature-mode-pkg.el"
-;;;;;;  "flymake-easy/flymake-easy.el" "ido-hacks/ido-hacks.el" "inf-ruby/inf-ruby-autoloads.el"
-;;;;;;  "inf-ruby/inf-ruby-pkg.el" "json/json.el" "lorem-ipsum/lorem-ipsum.el"
-;;;;;;  "magit/50magit.el" "magit/magit-bisect.el" "magit/magit-key-mode.el"
-;;;;;;  "magit/magit-pkg.el" "popup-kill-ring/popup-kill-ring.el"
+;;;;;;  "autopair/autopair-tests.el" "dash/dash.el" "eclim/ac-emacs-eclim-source.el"
+;;;;;;  "eclim/company-emacs-eclim.el" "eclim/eclim-ant.el" "eclim/eclim-completion.el"
+;;;;;;  "eclim/eclim-java.el" "eclim/eclim-maven.el" "eclim/eclim-problems.el"
+;;;;;;  "eclim/eclim-project.el" "eclim/eclim.el" "eclim/eclimd.el"
+;;;;;;  "eclim/emacs-eclim-pkg.el" "el-get/el-get-autoloads.el" "el-get/el-get-build.el"
+;;;;;;  "el-get/el-get-byte-compile.el" "el-get/el-get-core.el" "el-get/el-get-custom.el"
+;;;;;;  "el-get/el-get-dependencies.el" "el-get/el-get-install.el"
+;;;;;;  "el-get/el-get-methods.el" "el-get/el-get-notify.el" "el-get/el-get-recipes.el"
+;;;;;;  "el-get/el-get-status.el" "ensime/src/main/elisp/auto-complete.el"
+;;;;;;  "ensime/src/main/elisp/ensime-auto-complete.el" "ensime/src/main/elisp/ensime-builder.el"
+;;;;;;  "ensime/src/main/elisp/ensime-comint-utils.el" "ensime/src/main/elisp/ensime-config.el"
+;;;;;;  "ensime/src/main/elisp/ensime-debug.el" "ensime/src/main/elisp/ensime-doc.el"
+;;;;;;  "ensime/src/main/elisp/ensime-inf.el" "ensime/src/main/elisp/ensime-refactor.el"
+;;;;;;  "ensime/src/main/elisp/ensime-sbt.el" "ensime/src/main/elisp/ensime-scalex.el"
+;;;;;;  "ensime/src/main/elisp/ensime-search.el" "ensime/src/main/elisp/ensime-semantic-highlight.el"
+;;;;;;  "ensime/src/main/elisp/ensime-test.el" "ensime/src/main/elisp/ensime-ui.el"
+;;;;;;  "ensime/src/main/elisp/ensime-undo.el" "ensime/src/main/elisp/ensime.el"
+;;;;;;  "ensime/src/main/elisp/fuzzy.el" "ensime/src/main/elisp/popup.el"
+;;;;;;  "feature-mode/feature-mode-pkg.el" "flymake-easy/flymake-easy.el"
+;;;;;;  "fringe-helper/fringe-helper.el" "fuzzy/fuzzy.el" "git-gutter-fringe/git-gutter-fringe.el"
+;;;;;;  "git-gutter/test-git-gutter.el" "ido-hacks/ido-hacks.el"
+;;;;;;  "init-company-mode/init-company-mode.el" "js2-refactor/js2-refactor-pkg.el"
+;;;;;;  "js2-refactor/js2r-conditionals.el" "js2-refactor/js2r-conveniences.el"
+;;;;;;  "js2-refactor/js2r-formatting.el" "js2-refactor/js2r-functions.el"
+;;;;;;  "js2-refactor/js2r-helpers.el" "js2-refactor/js2r-iife.el"
+;;;;;;  "js2-refactor/js2r-vars.el" "js2-refactor/js2r-wrapping.el"
+;;;;;;  "lorem-ipsum/lorem-ipsum.el" "monky/monky-pkg.el" "multiple-cursors/mc-cycle-cursors.el"
+;;;;;;  "multiple-cursors/multiple-cursors-core.el" "multiple-cursors/multiple-cursors-pkg.el"
+;;;;;;  "multiple-cursors/multiple-cursors.el" "nav/nav-dev.el" "popup-kill-ring/popup-kill-ring.el"
 ;;;;;;  "popup/popup.el" "pos-tip/pos-tip.el" "pretty-mode/pretty-mode.el"
 ;;;;;;  "rcodetools/anything-rcodetools.el" "rcodetools/icicles-rcodetools.el"
 ;;;;;;  "rcodetools/rcodetools.el" "rhtml-mode/rhtml-erb.el" "rhtml-mode/rhtml-fonts.el"
 ;;;;;;  "rhtml-mode/rhtml-mode.el" "rhtml-mode/rhtml-navigation.el"
 ;;;;;;  "rhtml-mode/rhtml-ruby-hook.el" "rhtml-mode/rhtml-sgml-hacks.el"
 ;;;;;;  "rspec-mode/rspec-mode-expectations.el" "ruby-end/ruby-end-pkg.el"
-;;;;;;  "solarized-theme/color-theme-solarized-pkg.el" "solarized-theme/solarized-dark-theme.el"
-;;;;;;  "solarized-theme/solarized-light-theme.el" "yasnippet/dropdown-list.el"
-;;;;;;  "yasnippet/yasnippet-debug.el" "yasnippet/yasnippet-tests.el")
-;;;;;;  (20788 11214 415363))
+;;;;;;  "scala-mode/tool-support/src/emacs/scala-mode-auto.el" "scala-mode/tool-support/src/emacs/scala-mode-constants.el"
+;;;;;;  "scala-mode/tool-support/src/emacs/scala-mode-feature-electric.el"
+;;;;;;  "scala-mode/tool-support/src/emacs/scala-mode-feature-speedbar.el"
+;;;;;;  "scala-mode/tool-support/src/emacs/scala-mode-feature-tags.el"
+;;;;;;  "scala-mode/tool-support/src/emacs/scala-mode-feature.el"
+;;;;;;  "scala-mode/tool-support/src/emacs/scala-mode-fontlock.el"
+;;;;;;  "scala-mode/tool-support/src/emacs/scala-mode-indent.el"
+;;;;;;  "scala-mode/tool-support/src/emacs/scala-mode-lib.el" "scala-mode/tool-support/src/emacs/scala-mode-navigation.el"
+;;;;;;  "scala-mode/tool-support/src/emacs/scala-mode-ui.el" "scala-mode/tool-support/src/emacs/scala-mode-variables.el"
+;;;;;;  "scala-mode2/scala-mode2-fontlock.el" "scala-mode2/scala-mode2-indent.el"
+;;;;;;  "scala-mode2/scala-mode2-lib.el" "scala-mode2/scala-mode2-map.el"
+;;;;;;  "scala-mode2/scala-mode2-paragraph.el" "scala-mode2/scala-mode2-pkg.el"
+;;;;;;  "scala-mode2/scala-mode2-syntax.el" "solarized-theme/color-theme-solarized-pkg.el"
+;;;;;;  "solarized-theme/solarized-dark-theme.el" "solarized-theme/solarized-light-theme.el"
+;;;;;;  "yasnippet/dropdown-list.el" "yasnippet/yasnippet-debug.el"
+;;;;;;  "yasnippet/yasnippet-tests.el") (20892 13759 434568 0))
 
 ;;;***
 

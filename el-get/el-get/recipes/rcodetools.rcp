@@ -1,4 +1,0 @@
-(:name rcodetools
-       :description "Ruby code tools"
-       :type github
-       :pkgname "tnoda/rcodetools")

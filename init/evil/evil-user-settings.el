@@ -8,3 +8,7 @@
 (evil-set-initial-state 'magit-log-edit-mode 'emacs)
 (evil-set-initial-state 'nav-mode 'emacs)
 (evil-set-initial-state 'grep-mode 'emacs)
+(evil-set-initial-state 'ensime-search-mode 'emacs)
+(evil-set-initial-state 'fundamental-mode 'emacs)
+(evil-set-initial-state 'special-mode 'emacs)
+(evil-set-initial-state 'eclim-problems-mode 'emacs)

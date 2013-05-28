@@ -1,5 +1,0 @@
-(:name pretty-mode
-       :description "Redisplay parts of the buffer as pretty symbols"
-       :type github
-       :pkgname "scottaj/pretty-symbols"
-       :features "pretty-mode")

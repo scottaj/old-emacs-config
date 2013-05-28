@@ -45,10 +45,9 @@
                                     ((eq 1 line-number) 'linum-top)
                                     (t 'linum))))))
 
-(add-hook 'evil-insert-state-entry-hook (lambda () (setq linum-format 'dynamic)))
-(add-hook 'evil-insert-state-exit-hook (lambda () (setq linum-format 'linum-relativenumber-format)))
-(add-hook 'evil-emacs-state-entry-hook (lambda () (setq linum-format 'dynamic)))
-(add-hook 'evil-emacs-state-exit-hook (lambda () (setq linum-format 'linum-relativenumber-format)))
+;; (add-hook 'evil-insert-state-entry-hook (lambda () (setq linum-format 'dynamic)))
+;; (add-hook 'evil-insert-state-exit-hook (lambda () (setq linum-format 'linum-relativenumber-format)))
+;; (add-hook 'evil-emacs-state-entry-hook (lambda () (setq linum-format 'dynamic)))
+;; (add-hook 'evil-emacs-state-exit-hook (lambda () (setq linum-format 'linum-relativenumber-format)))
 
-(setq linum-format 'linum-relativenumber-format)
-
+;; (setq linum-format 'linum-relativenumber-format)

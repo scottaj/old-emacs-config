@@ -1,0 +1,1 @@
+(setq flymake-coffee-coffeelint-configuration-file "/Users/al/.emacs.d/coffeelint.json")

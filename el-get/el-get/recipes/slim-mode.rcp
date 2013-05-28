@@ -1,5 +1,0 @@
-(:name slim-mode
-       :description "Syntax highlighting for Slim"
-       :type github
-       :pkgname "bbatsov/slim-mode"
-       :features slim-mode)

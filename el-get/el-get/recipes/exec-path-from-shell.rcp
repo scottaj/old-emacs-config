@@ -1,6 +1,0 @@
-(:name exec-path-from-shell
-       :website "http://github.com/purcell/exec-path-from-shell"
-       :description "Fix shell settings in emacs on OSX"
-       :type github
-       :pkgname "purcell/exec-path-from-shell"
-       :features exec-path-from-shell)

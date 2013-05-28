@@ -1,5 +1,0 @@
-(:name ack-and-a-half
-       :type github
-       :pkgname "jhelwig/ack-and-a-half"
-       :description "Use ack where you might usually use grep."
-       :features ack-and-a-half)

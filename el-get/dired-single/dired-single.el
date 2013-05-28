@@ -387,3 +387,4 @@ Will also seek to uniquify the 'real' buffer name."
 (run-hooks 'dired-single-load-hook)
 
 ;;; dired-single.el ends here
+closed

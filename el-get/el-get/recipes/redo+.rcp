@@ -1,3 +1,0 @@
-(:name redo+
-       :type emacswiki
-       :description "Undo/redo system")

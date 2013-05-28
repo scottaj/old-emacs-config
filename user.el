@@ -2,8 +2,15 @@
 (setq ring-bell-function 'ignore)
 
 
+;; Electric indent
+(setq electric-indent-mode t)
+
+;; Auto-scroll compilation buffer
+(setq compilation-scroll-output t)
+
+
 ;; Cleanup whitespace
-(setq whitespace-action '(auto-cleanup)) ;; automatically clean up bad whitespace
+;; (setq whitespace-action '(auto-cleanup)) ;; automatically clean up bad whitespace
 (setq whitespace-style '(trailing space-before-tab indentation empty space-after-tab)) ;; only show bad whitespace
 (global-whitespace-mode t)
 
@@ -41,7 +48,7 @@
 ;; Font - I like Adobe Source Code Pro (it's free)
 (when (display-graphic-p)
   (set-face-attribute 'default nil :font "Source Code Pro")
-  (set-face-attribute 'default nil :height 160)) ; 160 means 16pt
+  (set-face-attribute 'default nil :height 180)) ; 180 means 18pt
 
 
 ;; Vertical ido-prompt
