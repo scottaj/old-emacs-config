@@ -39,7 +39,7 @@
 (define-key evil-normal-state-map (kbd ",l") 'goto-line)
 
 ;; Spellcheck
-(define-key evil-normal-state-map (kbd ",ce") flyspell-mode)
+(define-key evil-normal-state-map (kbd ",ce") 'flyspell-mode)
 (define-key evil-normal-state-map (kbd ",cb") 'flyspell-buffer)
 (define-key evil-normal-state-map (kbd ",cw") 'flyspell-word)
 (define-key evil-normal-state-map (kbd ",cc") 'flyspell-correct-word-before-point)
