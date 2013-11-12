@@ -4,13 +4,35 @@
 
 ;; Electric indent
 (setq electric-indent-mode t)
+(defun disable-electric-indent ()
+  (set (make-local-variable 'electric-indent-functions)
+       (list (lambda (arg) 'no-indent))))
+
+(add-hook 'coffee-mode-hook 'disable-electric-indent)
 
 ;; Auto-scroll compilation buffer
 (setq compilation-scroll-output t)
 
+(defun revert-buffer-keep-undo (&rest -)
+  "Revert buffer but keep undo history."
+  (interactive)
+  (let ((inhibit-read-only t))
+    (erase-buffer)
+    (insert-file-contents (buffer-file-name))
+    (set-visited-file-modtime (visited-file-modtime))
+    (set-buffer-modified-p nil)))
+
+(defun revert-all-buffers ()
+    "Refreshes all open buffers from their respective files."
+    (interactive)
+    (dolist (buf (buffer-list))
+      (with-current-buffer buf
+        (revert-buffer-keep-undo)))
+    (message "Refreshed open files.") )
+(global-set-key (kbd "C-x C-u") 'revert-all-buffers)
 
 ;; Cleanup whitespace
-;; (setq whitespace-action '(auto-cleanup)) ;; automatically clean up bad whitespace
+(setq whitespace-action '(auto-cleanup)) ;; automatically clean up bad whitespace
 (setq whitespace-style '(trailing space-before-tab indentation empty space-after-tab)) ;; only show bad whitespace
 (global-whitespace-mode t)
 
@@ -71,6 +93,9 @@
 (setq auto-mode-alist  (cons '("Gemfile.lock$" . ruby-mode) auto-mode-alist))
 (setq auto-mode-alist  (cons '("Rakefile$" . ruby-mode) auto-mode-alist))
 (add-to-list 'auto-mode-alist '("\\.rake$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.apex$" . java-mode))
+(add-to-list 'auto-mode-alist '("\\.hamlc$" . haml-mode))
+(add-to-list 'auto-mode-alist '("\\.coffee\\.erb$" . coffee-mode))
 
 
 ;; Cursor - like a bar, but it can be a block or something
@@ -82,8 +107,6 @@
 (fset 'break-line-near-80
    [?\C-a ?\C-u ?8 ?1 ?\C-f ?\M-b return])
 (global-set-key (kbd "C-|") 'break-line-near-80)
-
-
 
 ;; Shell settings
 (when (display-graphic-p)
@@ -130,3 +153,4 @@
 (add-hook 'nxml-mode-hook 'hexcolour-add-to-font-lock)
 (add-hook 'haml-mode-hook 'hexcolour-add-to-font-lock)
 (add-hook 'slim-mode-hook 'hexcolour-add-to-font-lock)
+(add-hook 'web-mode-hook 'hexcolour-add-to-font-lock)

@@ -78,6 +78,9 @@
                               :features feature-mode
                               :post-init (add-to-list 'auto-mode-alist
                                                       '("\\.feature\\'" . feature-mode)))
+                       (:name rake.el
+                              :type github
+                              :pkgname "vderyagin/rake.el")
 
                        (:name flymake-easy
                               :type github
@@ -113,13 +116,23 @@
                               :load-path ("./dist_2.10.0/elisp")
                               :post-init (progn
                                            (add-hook 'scala-mode-hook 'ensime-scala-mode-hook)))
-                       
+
                        (:name web-mode
                               :type github
                               :pkgname "fxbois/web-mode"
                               :features web-mode
                               :post-init (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode)))
-                       ))
+
+                       (:name floobits
+                              :type github
+                              :pkgname "Floobits/floobits-emacs")
+
+                       (:name auto-complete-clang-async
+                              :website "https://github.com/Golevka/emacs-clang-complete-async"
+                              :description "Auto-complete sources for Clang. Combine the power of AC, Clang and Yasnippet."
+                              :type github
+                              :pkgname "Golevka/emacs-clang-complete-async"
+                              :depends auto-complete)))
 
 
 
@@ -140,7 +153,7 @@
                 ;; idle-highlight-mode ; Highlight all instances of word under cursor
                 smex ; M-x on crack
                 fastnav ; fast zapping and marking
-                ;; lorem-ipsum ; Generate dummy text
+                lorem-ipsum ; Generate dummy text
                 popup-kill-ring ; Interactively select from kill ring
                 undo-tree ; Better undo/redo
                 nav ; Tree navigation
@@ -150,12 +163,14 @@
                 autopair
                 dash-at-point ; Dash documentation integration
                 ;js2-refactor ; Refactor javascript code
+                floobits
 
                 ;; Completion and templating
                 auto-complete
                 auto-complete-css
                 auto-complete-ruby
                 auto-complete-yasnippet
+                auto-complete-clang-async
                 yasnippet
 
 
@@ -169,7 +184,6 @@
                 js2-mode
                 mustache-mode
                 haml-mode
-                feature-mode
                 rhtml-mode
                 slim-mode ; Slim, jade, emblem, etc.
                 less-css-mode
@@ -197,7 +211,7 @@
                 ensime
 
                 ;; Java
-                eclim
+                ;; eclim
 
                 ;; Ruby
                 rvm
@@ -206,7 +220,8 @@
                 ;; inf-ruby-bond
                 ruby-end
                 rspec-mode
-                ;; bundler
+                feature-mode
+                bundler
                 ))
 
 (setq el-get-user-package-directory "~/.emacs.d/init")

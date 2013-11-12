@@ -10,3 +10,4 @@ url/
 *.elc
 eshell/
 /places
+el-get/

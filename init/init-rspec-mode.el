@@ -2,7 +2,9 @@
   "Use BASH shell for running the specs because of ZSH issues."
   (let ((shell-file-name "/bin/bash"))
     ;; MAKE SURE RVM STUFF GETS STUCK ON THE FRONT OF THE PATH OR OSX WILL RUIN YOUR DAY
-    (setenv "PATH" (concat (first (rvm--emacs-ruby-binary)) ":" (getenv "PATH")))
+    ;; ALSO ADD /usr/local/bin NEAR THE FRONT AND SET "PGHOST" OR POSTGRES WILL FUCK UP
+    (setenv "PATH" (concat (first (rvm--emacs-ruby-binary)) ":" "/usr/local/bin" ":" (getenv "PATH")))
+    (setenv "PGHOST" "localhost")
     ad-do-it))
 (ad-activate 'rspec-compile)
 
