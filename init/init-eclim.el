@@ -12,16 +12,11 @@
                                   indent-tabs-mode nil)))
 
 (ac-config-default)
-;; (ac-config-default)
 ;; (require 'ac-emacs-eclim-source)
 ;; (ac-emacs-eclim-config)
+(setq eclim-auto-save t)
 
 (add-hook 'eclim-mode-hook 'ac-emacs-eclim-config)
-
-;; (require 'company)
-;; (require 'company-emacs-eclim)
-;; (company-emacs-eclim-setup)
-;; (global-company-mode t)
 
 (setq help-at-pt-display-when-idle t)
 (setq help-at-pt-timer-delay 0.1)

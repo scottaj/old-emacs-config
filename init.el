@@ -57,6 +57,15 @@
                               :pkgname "scottjad/ido-hacks"
                               :features ido-hacks)
 
+                       (:name erc-image
+                              :description "Show images in ERC."
+                              :type github
+                              :pkgname "kidd/erc-image.el"
+                              :features erc-image
+															:post-init (progn
+																					 (add-to-list 'erc-modules 'image)
+																					 (erc-update-modules)))
+
                        (:name rainbow-delimiters
                               :website "https://github.com/jlr/rainbow-delimiters#readme"
                               :description "Color nested parentheses, brackets, and braces according to their depth."
@@ -132,7 +141,21 @@
                               :description "Auto-complete sources for Clang. Combine the power of AC, Clang and Yasnippet."
                               :type github
                               :pkgname "Golevka/emacs-clang-complete-async"
-                              :depends auto-complete)))
+                              :depends auto-complete)
+
+											 (:name tuareg-imenu
+															:type http
+															:localname "tuareg-imenu.el"
+															:url "http://aspellfr.free.fr/tuareg-imenu/tuareg-imenu.el"
+															:shallow nil
+															:depends tuareg-mode
+															:features tuareg-imenu)
+
+											 (:name fsharp-mode
+															:type github
+															:pkgname "rneatherway/emacs-fsharp-mode-bin"
+															:website "https://github.com/fsharp/fsharpbinding"
+															:depends (auto-complete popup pos-tip s dash))))
 
 
 
@@ -143,39 +166,46 @@
                 ;; Vim
                 evil
                 evil-numbers ; Increment and decrement numbers
-                evil-surround ; Work with enclosing delimiters like quotes and braces.
+               evil-surround ; Work with enclosing delimiters like quotes and braces.
 
                 ;; Extra functionality
+								erc-extras
                 textmate ; Common Textmate commands and keybindings.
+								projectile
+								erc-image
                 magit ; Git plugin
+								; minimap ;; Sublime-like file preview
                 ;; monky ; Mercurial plugin
                 git-gutter-fringe ; Show git status for file on fringe.
-                ;; idle-highlight-mode ; Highlight all instances of word under cursor
+                idle-highlight-mode ; Highlight all instances of word under cursor
                 smex ; M-x on crack
                 fastnav ; fast zapping and marking
-                lorem-ipsum ; Generate dummy text
+                ; lorem-ipsum ; Generate dummy text
                 popup-kill-ring ; Interactively select from kill ring
                 undo-tree ; Better undo/redo
                 nav ; Tree navigation
                 ido-hacks ; Make ido perform better
                 ack ; Use ack for searching
-                paredit ; Lisp paren editing
+                ; paredit ; Lisp paren editing
                 autopair
                 dash-at-point ; Dash documentation integration
-                ;js2-refactor ; Refactor javascript code
-                floobits
+                js2-refactor ; Refactor javascript code
+								tern
+                ; floobits
 
                 ;; Completion and templating
                 auto-complete
-                auto-complete-css
-                auto-complete-ruby
-                auto-complete-yasnippet
-                auto-complete-clang-async
-                yasnippet
+                ; auto-complete-css
+                ; auto-complete-ruby
+               ; auto-complete-yasnippet
+               ; auto-complete-clang-async
+               ; yasnippet
 
 
                 ;; Extra language support
                 coffee-mode
+								emmet-mode
+								tss
                 web-mode
                 yaml-mode
                 markdown-mode
@@ -187,41 +217,40 @@
                 rhtml-mode
                 slim-mode ; Slim, jade, emblem, etc.
                 less-css-mode
+								fsharp-mode
+								tuareg-mode
 
                 ;; Syntax checking
-                flymake
-                flymake-easy
-                flymake-coffee
-                flymake-sass
-                flymake-css
-                flymake-haml
+								flycheck
+								flycheck-color-mode-line
 
                 ;; Eye candy
                 rainbow-delimiters
                 pretty-mode
                 solarized-theme
+								nyan-mode
 
-                ;; Clojure
+                ;; /Clojure
                 ;; clojure-mode
                 ;; nrepl
                 ;; ac-nrepl
 
                 ;; Scala
-                scala-mode2
-                ensime
+                ; scala-mode2
+                ; ensime
 
                 ;; Java
-                ;; eclim
+                ; eclim
 
                 ;; Ruby
-                rvm
-                flymake-ruby
+                ; rvm
+                ;; flymake-ruby
                 ;; inf-ruby
                 ;; inf-ruby-bond
-                ruby-end
-                rspec-mode
-                feature-mode
-                bundler
+                ; ruby-end
+                ; rspec-mode
+                ; feature-mode
+                ; bundler
                 ))
 
 (setq el-get-user-package-directory "~/.emacs.d/init")

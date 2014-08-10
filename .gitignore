@@ -11,3 +11,10 @@ url/
 eshell/
 /places
 el-get/
+/.mc-lists.el
+/el-get-bk/
+/elpa/auctex-11.86/
+/elpa/minimap-1.0/
+/emacs/
+/projectile-bookmarks.eld
+/projectile.cache

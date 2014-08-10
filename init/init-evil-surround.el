@@ -1,2 +1,1 @@
-(require 'surround)
-(global-surround-mode 1)
+(require 'evil-surround)

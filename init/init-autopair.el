@@ -1,5 +1,5 @@
 (autopair-global-mode)
-(autopair-should-autowrap)
+;(autopair-should-autowrap)
 
 (add-hook 'clojure-mode-hook (lambda () (autopair-mode -1)))
 (add-hook 'emacs-lisp-mode-hook (lambda () (autopair-mode -1)))

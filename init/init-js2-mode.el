@@ -1,8 +1,14 @@
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 
 (setq js2-global-externs '("console"
+                           "Backbone"
+													 "Marionette"
+                           "define"
                            "Ember"
+                           "DS"
                            "Handlebars"
+                           "moment"
+                           "numeral"
                            "ember_assert"
                            "ember_warn"
                            "ember_deprecate"
@@ -22,6 +28,7 @@
                            "minispade"
                            "d3"
                            "$"
+                           "jQuery"
                            "Eflex"
                            "_"
                            "moment"
@@ -53,3 +60,4 @@
                 (setq ad-return-value (js2-parse-assign-expr))
                 ad-do-it))
 (ad-activate 'js2-parse-statement)
+(add-hook 'js2-mode-hook 'js2-imenu-extras-mode)

@@ -2,7 +2,7 @@
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/el-get/auto-complete/dict")
 (ac-config-default)
 (setq ac-auto-show-menu t)
-(setq ac-modes '(emacs-lisp-mode lisp-interaction-mode c-mode cc-mode c++-mode java-mode clojure-mode scala-mode scheme-mode ocaml-mode tuareg-mode perl-mode cperl-mode python-mode ruby-mode ecmascript-mode javascript-mode js-mode js2-mode php-mode css-mode makefile-mode sh-mode fortran-mode f90-mode ada-mode xml-mode sgml-mode slim-mode coffee-mode nxml-mode less-css-mode web-mode html-mode java-mode web-mode-prog-mode objc-mode))
+(setq ac-modes '(emacs-lisp-mode lisp-interaction-mode c-mode cc-mode c++-mode java-mode clojure-mode scala-mode scheme-mode ocaml-mode tuareg-mode perl-mode cperl-mode python-mode ruby-mode ecmascript-mode javascript-mode js-mode js2-mode php-mode css-mode makefile-mode sh-mode fortran-mode f90-mode ada-mode xml-mode sgml-mode slim-mode coffee-mode nxml-mode less-css-mode web-mode html-mode java-mode web-mode-prog-mode objc-mode fsharp-mode))
 (setq ac-stop-words '("end" "def" "begin" "do" "it"))
 (setq ac-use-fuzzy t)
 (ac-flyspell-workaround)

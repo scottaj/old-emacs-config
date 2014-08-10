@@ -31,12 +31,16 @@
 ;; Open file
 (define-key evil-normal-state-map (kbd ",e") 'ido-find-file)
 
-;; Jump to file in project
-;; REQUIRES textmate-mode.el
-(define-key evil-normal-state-map (kbd ",t") 'textmate-goto-file)
+;; ;; Jump to file in project
+;; ;; REQUIRES textmate-mode.el
+;; (define-key evil-normal-state-map (kbd ",t") 'textmate-goto-file)
 (define-key evil-normal-state-map (kbd ",T") 'textmate-goto-symbol)
-(define-key evil-normal-state-map (kbd ", C-t") 'textmate-clear-cache)
-(define-key evil-normal-state-map (kbd ",l") 'goto-line)
+;; (define-key evil-normal-state-map (kbd ", C-t") 'textmate-clear-cache)
+;; (define-key evil-normal-state-map (kbd ",l") 'goto-line)
+
+;; Projectile
+(define-key evil-normal-state-map (kbd ",t") 'projectile-find-file)
+
 
 ;; Spellcheck
 (define-key evil-normal-state-map (kbd ",ce") 'flyspell-mode)
@@ -76,6 +80,36 @@
                                                   (interactive)
                                                   (evil-insert-state)
                                                   (yas-insert-snippet)))
+
+;; F#
+(define-key evil-normal-state-map (kbd ",oe") 'fsharp-ac/next-error)
+(define-key evil-normal-state-map (kbd ",od") 'fsharp-ac/gotodefn-at-point)
+(define-key evil-normal-state-map (kbd ",or") 'fsharp-ac/load-project)
+
+;; js2 mode
+(define-key evil-normal-state-map (kbd ",ref") 'js2r-extract-function)
+(define-key evil-normal-state-map (kbd ",rem") 'js2r-extract-method)
+(define-key evil-normal-state-map (kbd ",rip") 'js2r-introduce-parameter)
+(define-key evil-normal-state-map (kbd ",rlp") 'js2r-localize-parameter)
+(define-key evil-normal-state-map (kbd ",reo") 'js2r-expand-object)
+(define-key evil-normal-state-map (kbd ",rco") 'js2r-contract-object)
+(define-key evil-normal-state-map (kbd ",rea") 'js2r-expand-array)
+(define-key evil-normal-state-map (kbd ",rca") 'js2r-contract-array)
+(define-key evil-normal-state-map (kbd ",reu") 'js2r-expand-function)
+(define-key evil-normal-state-map (kbd ",rcu") 'js2r-contract-function)
+(define-key evil-normal-state-map (kbd ",rev") 'js2r-extract-var)
+(define-key evil-normal-state-map (kbd ",riv") 'js2r-inline-var)
+(define-key evil-normal-state-map (kbd ",rrv") 'js2r-rename-var)
+(define-key evil-normal-state-map (kbd ",rvt") 'js2r-var-to-this)
+(define-key evil-normal-state-map (kbd ",rao") 'js2r-arguments-to-object)
+(define-key evil-normal-state-map (kbd ",r?") 'js2r-ternary-to-if)
+(define-key evil-normal-state-map (kbd ",ruw") 'js2r-unwrap)
+(define-key evil-normal-state-map (kbd ",rcl") 'js2r-log-this)
+(define-key evil-normal-state-map (kbd ",rsl") 'js2r-forward-slurp)
+(define-key evil-normal-state-map (kbd ",rba") 'js2r-forward-barf)
+
+;; Minimap
+(define-key evil-normal-state-map (kbd ",m") 'minimap-toggle)
 
 ;; Window moving
 (define-key evil-normal-state-map (kbd "C-w <left>") 'windmove-left)
@@ -126,6 +160,7 @@
 (evil-declare-key 'normal java-mode-map (kbd ",jbe") 'eclim-mode)
 (evil-declare-key 'normal java-mode-map (kbd ",jm") 'eclim-maven-run)
 (evil-declare-key 'normal java-mode-map (kbd ",ja") 'eclim-ant-run)
+(evil-declare-key 'normal java-mode-map (kbd ",je") 'eclim-project-build)
 (evil-declare-key 'normal java-mode-map (kbd ",jt") 'eclim-problems)
 (evil-declare-key 'normal java-mode-map (kbd ",jo") 'eclim-java-format)
 (evil-declare-key 'normal java-mode-map (kbd ",jri") 'eclim-java-import-organize)
@@ -140,6 +175,10 @@
 (evil-declare-key 'normal java-mode-map (kbd ",js") 'eclim-java-find-generic)
 
 
+;; Mustache and handlebars generators
+(evil-declare-key 'normal mustache-mode-map (kbd ",mt") 'mustache-insert-tag)
+(evil-declare-key 'normal mustache-mode-map (kbd ",mb") 'mustache-insert-section)
+(evil-declare-key 'normal mustache-mode-map (kbd ",mv") 'mustache-insert-variable)
 
 
 ;; Test runners/helpers
