@@ -1,7 +1,7 @@
 ;; Clear insert state bindings.
 (setcdr evil-insert-state-map nil)
 
-;; Don't wait for any other keys after escape is pressed.
+; Don't wait for any other keys after escape is pressed.
 (setq evil-esc-delay 0)
 
 ;; Make sure escape gets back to normal state and quits things.
@@ -29,17 +29,18 @@
 ;;;; Misc useful keybindings
 
 ;; Open file
-(define-key evil-normal-state-map (kbd ",e") 'ido-find-file)
+(define-key evil-normal-state-map (kbd ",e") 'helm-find-files)
 
 ;; ;; Jump to file in project
 ;; ;; REQUIRES textmate-mode.el
 ;; (define-key evil-normal-state-map (kbd ",t") 'textmate-goto-file)
-(define-key evil-normal-state-map (kbd ",T") 'textmate-goto-symbol)
-;; (define-key evil-normal-state-map (kbd ", C-t") 'textmate-clear-cache)
+(define-key evil-normal-state-map (kbd ",T") 'helm-semantic-or-imenu)
+(define-key evil-normal-state-map (kbd ", C-t") 'projectile-invalidate-cache)
 ;; (define-key evil-normal-state-map (kbd ",l") 'goto-line)
 
 ;; Projectile
-(define-key evil-normal-state-map (kbd ",t") 'projectile-find-file)
+(define-key evil-normal-state-map (kbd ",t") 'helm-projectile-find-file)
+(define-key evil-normal-state-map (kbd "C-p") 'helm-show-kill-ring)
 
 
 ;; Spellcheck
@@ -63,7 +64,7 @@
 
 
 ;; Switch to another open buffer
-(define-key evil-normal-state-map (kbd ",,") 'switch-to-buffer)
+(define-key evil-normal-state-map (kbd ",,") 'helm-mini)
 
 ;; Comment or uncomment the current line or marked region
 ;; REQUIRES CUSTOM DEFINED FUNTION
@@ -72,7 +73,7 @@
 
 ;; File tree navigation window
 ;; REQUIRES emacs-nav
-(define-key evil-normal-state-map (kbd ",n") 'nav-toggle)
+(define-key evil-normal-state-map (kbd ",n") 'neotree-toggle)
 
 ;; Prompt for snippet
 ;; REQUIRES Yasnippet

@@ -72,6 +72,7 @@
 	(set-face-attribute 'default nil :font "Source Code Pro")
 	(set-face-attribute 'default nil :height 240)) ; 180 means 18pt
 
+(load-theme 'solarized-dark t)
 
 ;; Vertical ido-prompt
 (setq ido-decorations (quote
@@ -160,112 +161,155 @@
 
 
 ;; erc
-(require 'erc-nicklist)
+;; (require 'erc-nicklist)
 
-;; (erc :server "atlassian.r1dev.com" :port 6667 :nick "ascott")
-;; (setq erc-autojoin-channels-alist
-			;; '(("r1dev.com" "#desking-dev")))
+;; ;; (erc :server "atlassian.r1dev.com" :port 6667 :nick "ascott")
+;; ;; (setq erc-autojoin-channels-alist
+;;			;; '(("r1dev.com" "#desking-dev")))
 
-(defvar growlnotify-command (executable-find "growlnotify") "The path to growlnotify")
+;; (defvar growlnotify-command (executable-find "growlnotify") "The path to growlnotify")
 
-(defun growl (title message)
-  "Shows a message through the growl notification system using
- `growlnotify-command` as the program."
-  (flet ((encfn (s) (encode-coding-string s (keyboard-coding-system))) )
-    (let* ((process (start-process "growlnotify" nil
-                                   growlnotify-command
-                                   (encfn title)
-                                   "-a" "Emacs"
-                                   "-n" "Emacs")))
-      (process-send-string process (encfn message))
-      (process-send-string process "\n")
-      (process-send-eof process)))
-  t)
+;; (defun growl (title message)
+;;	"Shows a message through the growl notification system using
+;;  `growlnotify-command` as the program."
+;;	(flet ((encfn (s) (encode-coding-string s (keyboard-coding-system))) )
+;;		(let* ((process (start-process "growlnotify" nil
+;;																	 growlnotify-command
+;;																	 (encfn title)
+;;																	 "-a" "Emacs"
+;;																	 "-n" "Emacs")))
+;;			(process-send-string process (encfn message))
+;;			(process-send-string process "\n")
+;;			(process-send-eof process)))
+;;	t)
 
-(defun my-erc-hook (match-type nick message)
-  "Shows a growl notification, when user's nick was mentioned. If the buffer is currently not visible, makes it sticky."
-  (unless (posix-string-match "^\\** *Users on #" message)
-    (growl
-     (concat "ERC: name mentioned on: " (buffer-name (current-buffer)))
-     message
-     )))
+;; (defun my-erc-hook (match-type nick message)
+;;	"Shows a growl notification, when user's nick was mentioned. If the buffer is currently not visible, makes it sticky."
+;;	(unless (posix-string-match "^\\** *Users on #" message)
+;;		(growl
+;;		 (concat "ERC: name mentioned on: " (buffer-name (current-buffer)))
+;;		 message
+;;		 )))
 
-(add-hook 'erc-text-matched-hook 'my-erc-hook)
-(add-hook 'erc-join-hook 'erc-nicklist)
+;; (add-hook 'erc-text-matched-hook 'my-erc-hook)
+;; (add-hook 'erc-join-hook 'erc-nicklist)
 
-(eval-after-load 'erc-track
-  '(progn
-     (defun erc-bar-move-back (n)
-       "Moves back n message lines. Ignores wrapping, and server messages."
-       (interactive "nHow many lines ? ")
-       (re-search-backward "^.*<.*>" nil t n))
+;; (eval-after-load 'erc-track
+;;	'(progn
+;;		 (defun erc-bar-move-back (n)
+;;			 "Moves back n message lines. Ignores wrapping, and server messages."
+;;			 (interactive "nHow many lines ? ")
+;;			 (re-search-backward "^.*<.*>" nil t n))
 
-     (defun erc-bar-update-overlay ()
-       "Update the overlay for current buffer, based on the content of
-erc-modified-channels-alist. Should be executed on window change."
-       (interactive)
-       (let* ((info (assq (current-buffer) erc-modified-channels-alist))
-	      (count (cadr info)))
-	 (if (and info (> count erc-bar-threshold))
-	     (save-excursion
-	       (end-of-buffer)
-	       (when (erc-bar-move-back count)
-		 (let ((inhibit-field-text-motion t))
-		   (move-overlay erc-bar-overlay
-				 (line-beginning-position)
-				 (line-end-position)
-				 (current-buffer)))))
-	   (delete-overlay erc-bar-overlay))))
+;;		 (defun erc-bar-update-overlay ()
+;;			 "Update the overlay for current buffer, based on the content of
+;; erc-modified-channels-alist. Should be executed on window change."
+;;			 (interactive)
+;;			 (let* ((info (assq (current-buffer) erc-modified-channels-alist))
+;;				(count (cadr info)))
+;;	 (if (and info (> count erc-bar-threshold))
+;;			 (save-excursion
+;;				 (end-of-buffer)
+;;				 (when (erc-bar-move-back count)
+;;		 (let ((inhibit-field-text-motion t))
+;;			 (move-overlay erc-bar-overlay
+;;				 (line-beginning-position)
+;;				 (line-end-position)
+;;				 (current-buffer)))))
+;;		 (delete-overlay erc-bar-overlay))))
 
-     (defvar erc-bar-threshold 1
-       "Display bar when there are more than erc-bar-threshold unread messages.")
-     (defvar erc-bar-overlay nil
-       "Overlay used to set bar")
-     (setq erc-bar-overlay (make-overlay 0 0))
-     (overlay-put erc-bar-overlay 'face '(:underline "black"))
-     ;;put the hook before erc-modified-channels-update
-     (defadvice erc-track-mode (after erc-bar-setup-hook
-				      (&rest args) activate)
-       ;;remove and add, so we know it's in the first place
-       (remove-hook 'window-configuration-change-hook 'erc-bar-update-overlay)
-       (add-hook 'window-configuration-change-hook 'erc-bar-update-overlay))
-     (add-hook 'erc-send-completed-hook (lambda (str)
-					  (erc-bar-update-overlay)))))
+;;		 (defvar erc-bar-threshold 1
+;;			 "Display bar when there are more than erc-bar-threshold unread messages.")
+;;		 (defvar erc-bar-overlay nil
+;;			 "Overlay used to set bar")
+;;		 (setq erc-bar-overlay (make-overlay 0 0))
+;;		 (overlay-put erc-bar-overlay 'face '(:underline "black"))
+;;		 ;;put the hook before erc-modified-channels-update
+;;		 (defadvice erc-track-mode (after erc-bar-setup-hook
+;;							(&rest args) activate)
+;;			 ;;remove and add, so we know it's in the first place
+;;			 (remove-hook 'window-configuration-change-hook 'erc-bar-update-overlay)
+;;			 (add-hook 'window-configuration-change-hook 'erc-bar-update-overlay))
+;;		 (add-hook 'erc-send-completed-hook (lambda (str)
+;;						(erc-bar-update-overlay)))))
 
 ;; Merlin for ocaml
 ;; Not an el-get package, requires opam to be setup and for merlin to be installed via
 ;; opam
-(setq opam-share (substring (shell-command-to-string "opam config var share") 0 -1))
-(add-to-list 'load-path (concat opam-share "/emacs/site-lisp"))
-(require 'merlin)
-(add-hook 'tuareg-mode-hook 'merlin-mode)
-(add-hook 'caml-mode-hook 'merlin-mode)
-(setq merlin-use-auto-complete-mode t)
+;; (setq opam-share (substring (shell-command-to-string "opam config var share") 0 -1))
+;; (add-to-list 'load-path (concat opam-share "/emacs/site-lisp"))
+;; (require 'merlin)
+;; (add-hook 'tuareg-mode-hook 'merlin-mode)
+;; (add-hook 'caml-mode-hook 'merlin-mode)
+;; (setq merlin-use-auto-complete-mode t)
 
-(defun build-and-refresh-ocaml ()
-	"Build ocaml project using grunt and then refresh merlin"
-	(shell-command "grunt --no-color" "*OCaml Build Output*")
-	(merlin-refresh))
+;; (defun build-and-refresh-ocaml ()
+;;	"Build ocaml project using grunt and then refresh merlin"
+;;	(shell-command "grunt --no-color" "*OCaml Build Output*")
+;;	(merlin-refresh))
 
-(defun ocaml-type-at-point ()
-	"Use merlin to show the type of the ocaml expression under the cursor"
-	(if merlin-mode;; get current selection or word
-			(let (bds p1 p2 inputStr resultStr)
+;; (defun ocaml-type-at-point ()
+;;	"Use merlin to show the type of the ocaml expression under the cursor"
+;;	(if merlin-mode;; get current selection or word
+;;			(let (bds p1 p2 inputStr resultStr)
 
-				(if (region-active-p)
-					(setq bds (cons (region-beginning) (region-end)))
-					(setq bds (bounds-of-thing-at-point 'symbol)))
-				(setq p1 (car bds))
-				(setq p2 (cdr bds))
+;;				(if (region-active-p)
+;;					(setq bds (cons (region-beginning) (region-end)))
+;;					(setq bds (bounds-of-thing-at-point 'symbol)))
+;;				(setq p1 (car bds))
+;;				(setq p2 (cdr bds))
 
-				(setq input-str (buffer-substring-no-properties p1 p2))
-				(message input-str)
-				(message (merlin-type-expr (input-str))))))
+;;				(setq input-str (buffer-substring-no-properties p1 p2))
+;;				(message input-str)
+;;				(message (merlin-type-expr (input-str))))))
 
-(run-with-idle-timer 2
-										 :repeat 'ocaml-type-at-point)
+;; (run-with-idle-timer 2
+;;										 :repeat 'ocaml-type-at-point)
 
-(add-hook 'merlin-mode-hook (lambda ()
-															(add-hook 'after-save-hook 'build-and-refresh-ocaml t t)))
+;; (add-hook 'merlin-mode-hook (lambda ()
+;;															(add-hook 'after-save-hook 'build-and-refresh-ocaml t t)))
 
 (global-set-key (kbd "C-=") 'yas-expand)
+
+(set-default 'server-socket-dir "~/.emacs.d/server")
+(if (functionp 'window-system)
+		(when (and (window-system)
+					 (>= emacs-major-version 24))
+			(server-start)))
+
+
+
+;; Pretty symbols
+(add-hook 'prog-mode-hook (lambda ()
+														(setq prettify-symbols-alist '(("===" . ?≡)
+															 ("!==" . ?≢) (">=" . ?≥) ("<=" . ?≤)
+															 ("alpha" . ?α) ("beta" . ?β) ("gamma" . ?γ)
+															 ("delta" . Δ) ("epsilon" . ?ε) ("zeta" . ?ζ)
+															 ("eta" . ?η) ("theta" . ?θ) ("lambda" . ?λ)
+															 ("micro" . ?μ) ("pi" . ?π) ("rho" . ?ρ)
+															 ("sigma" . ?σ) ("phi" . ?φ) ("omega" . ?Ω)
+															 ("sqrt" . ?√) ("sum" . ∑) ("infinity" . ∞)
+															 ("Infinity" . ∞) ("=>" . ?⇒) ("->" . ?→)))))
+
+(defconst javascript--prettify-symbols-alist '(("function" . ?λ)
+																								("null" . ?∅)))
+(add-hook 'js-mode-hook (lambda ()
+													(turn-on-prettify-symbols-mode)
+													(append prettify-symbols-alist javascript--prettify-symbols-alist)))
+
+(add-hook 'js2-mode-hook (lambda ()
+													(turn-on-prettify-symbols-mode)
+													(append prettify-symbols-alist javascript--prettify-symbols-alist)))
+
+(global-set-key (kbd "M-x") 'helm-M-x)
+
+
+;; Scrolling
+(setq redisplay-dont-pause t
+      scroll-margin 1
+      scroll-step 1
+      scroll-conservatively 10000
+      scroll-preserve-screen-position 1)
+(setq mouse-wheel-follow-mouse 't)
+(setq mouse-wheel-scroll-amount '(1 ((shift) . 1)))
+

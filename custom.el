@@ -37,7 +37,9 @@
  ;; If there is more than one, they won't work right.
  '(ac-auto-show-menu 1.0)
  '(ac-exuberant-ctags-tag-file-name "TAGS")
- '(ac-modes (quote (emacs-lisp-mode lisp-interaction-mode c-mode cc-mode c++-mode java-mode clojure-mode scala-mode scheme-mode ocaml-mode tuareg-mode perl-mode cperl-mode python-mode ruby-mode ecmascript-mode javascript-mode js-mode js2-mode php-mode css-mode makefile-mode sh-mode fortran-mode f90-mode ada-mode xml-mode sgml-mode slim-mode coffee-mode)))
+ '(ac-modes
+	 (quote
+		(emacs-lisp-mode lisp-interaction-mode c-mode cc-mode c++-mode java-mode clojure-mode scala-mode scheme-mode ocaml-mode tuareg-mode perl-mode cperl-mode python-mode ruby-mode ecmascript-mode javascript-mode js-mode js2-mode php-mode css-mode makefile-mode sh-mode fortran-mode f90-mode ada-mode xml-mode sgml-mode slim-mode coffee-mode)))
  '(ac-stop-words (quote ("end" "def" "begin" "do" "it")))
  '(ac-use-fuzzy t)
  '(coffee-tab-width 2)
@@ -50,6 +52,9 @@
  '(cua-rectangle-mark-key [C-return])
  '(cua-remap-control-v nil)
  '(cua-remap-control-z nil)
+ '(custom-safe-themes
+	 (quote
+		("8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
  '(eclim-eclipse-dirs (quote ("/Applications/eclipse")))
  '(eclimd-default-workspace "~/Projects/workspace")
  '(eclimd-wait-for-process nil)
@@ -65,6 +70,7 @@
  '(global-highlight-changes-mode nil)
  '(global-hl-line-mode nil)
  '(global-linum-mode t)
+ '(global-prettify-symbols-mode t)
  '(global-whitespace-mode t)
  '(help-at-pt-display-when-idle (quote (flymake-overlay)) nil (help-at-pt))
  '(help-at-pt-timer-delay 0.5)
@@ -76,8 +82,9 @@
  '(inhibit-startup-screen nil)
  '(initial-buffer-choice nil)
  '(initial-frame-alist (quote ((vertical-scroll-bars) (fullscreen . maximized))))
+ '(js-indent-level 2)
  '(js2-auto-indent-p t)
- '(js2-basic-offset 2)
+ '(js2-basic-offset 2 t)
  '(js2-highlight-level 3)
  '(js2-include-node-externs t)
  '(js2-include-rhino-externs t)
@@ -86,10 +93,15 @@
  '(line-number-mode nil)
  '(lisp-indent-offset nil)
  '(mac-pass-command-to-system t)
+ '(magit-use-overlays nil)
  '(minimap-update-delay 0.1)
  '(mode-require-final-newline nil)
- '(nav-boring-file-regexps (quote ("^[.][^.].*$" "^[.]$" "~$" "[.]elc$" "[.]pyc$" "[.]o$" "[.]bak$" "^_MTN$" "^blib$" "^CVS$" "^RCS$" "^SCCS$" "^_darcs$" "^_sgbak$" "^autom4te.cache$" "^cover_db$" "^_build$" "^#.+#")))
+ '(nav-boring-file-regexps
+	 (quote
+		("^[.][^.].*$" "^[.]$" "~$" "[.]elc$" "[.]pyc$" "[.]o$" "[.]bak$" "^_MTN$" "^blib$" "^CVS$" "^RCS$" "^SCCS$" "^_darcs$" "^_sgbak$" "^autom4te.cache$" "^cover_db$" "^_build$" "^#.+#")))
  '(nav-width 25)
+ '(neo-create-file-auto-open t)
+ '(neo-smart-open t)
  '(ns-command-modifier (quote super))
  '(nxhtml-autoload-web nil)
  '(nxhtml-menu-mode t)
@@ -100,7 +112,9 @@
  '(nyan-wavy-trail t)
  '(projectile-enable-caching t)
  '(projectile-global-mode t)
- '(projectile-globally-ignored-directories (quote (".idea" ".eunit" ".git" ".hg" ".fslckout" ".bzr" "_darcs" ".tox" ".svn" "build" "target")))
+ '(projectile-globally-ignored-directories
+	 (quote
+		(".idea" ".eunit" ".git" ".hg" ".fslckout" ".bzr" "_darcs" ".tox" ".svn" "build" "target")))
  '(projectile-test-files-suffices (quote ("_test" "_spec" "Spec" "Test" "-test" "-spec")))
  '(require-final-newline nil)
  '(rspec-spec-command "rspec")
@@ -127,5 +141,7 @@
  '(wrap-region-global-mode t)
  '(yas-also-auto-indent-first-line t)
  '(yas-global-mode t nil (yasnippet))
- '(yas-snippet-dirs (quote ("~/.emacs.d/snippets/" "~/.emacs.d/el-get/yasnippet/snippets/")) nil (yasnippet))
+ '(yas-snippet-dirs
+	 (quote
+		("~/.emacs.d/snippets/" "~/.emacs.d/el-get/yasnippet/snippets/")) nil (yasnippet))
  '(yas-wrap-around-region t))
