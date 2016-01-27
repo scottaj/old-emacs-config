@@ -1,3 +1,6 @@
+#This config is old and now unmaintaied/used. See my new config here: https://github.com/scottaj/new-emacs-config
+
+
 # Al's Emacs Config
 
 ## Introduction
